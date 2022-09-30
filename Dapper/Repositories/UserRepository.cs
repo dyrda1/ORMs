@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using ORM.Dapper.Common;
-using ORM.Dapper.Entities;
+using ORMs.Domain.Entities;
 using ORM.Dapper.Interfaces;
 using System;
 using System.Collections.Generic;
