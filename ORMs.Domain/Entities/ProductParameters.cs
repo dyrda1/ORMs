@@ -14,7 +14,7 @@ namespace ORMs.Domain.Entities
         public Guid ProductId { get; set; }
 
         public Product Product { get; set; }
-        public ICollection<Order> Orders { get; set; }
-        public ICollection<Cart> Carts { get; set; }
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public ICollection<Cart> Carts { get; set; } = new List<Cart>();
     }
 }

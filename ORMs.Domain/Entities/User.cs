@@ -8,8 +8,8 @@ namespace ORMs.Domain.Entities
         public Guid Id { get; set; }
         public string Username { get; set; }
 
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<Order> Orders { get; set; }
-        public ICollection<Cart> Carts { get; set; }
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public ICollection<Cart> Carts { get; set; } = new List<Cart>();
     }
 }
