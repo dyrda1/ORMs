@@ -1,22 +1,28 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using ORM.Dapper.Common;
 using ORMs.Domain.Entities;
-using ORM.Dapper.Interfaces;
 using System;
-using System.Data.Common;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using ORM.Dapper.Common.Interfaces;
+using System.Data;
 
 namespace ORM.Dapper.Repositories
 {
-    public class UserRepository : BaseRepository, IUserRepository
+    public class UserRepository : IUserRepository
     {
+        private readonly SqlConnection _connection;
+        private readonly IDbTransaction _transaction;
+
+        public UserRepository(SqlConnection connection, IDbTransaction transaction)
+        {
+            _connection = connection;
+            _transaction = transaction;
+        }
+
         public async Task<IEnumerable<User>> GetAllWithComments()
         {
-            using var connection = new SqlConnection(_connectionString);
-
-            var users = await connection.QueryAsync<User, Comment, User>
+            var users = await _connection.QueryAsync<User, Comment, User>
                     (
                         "SELECT * FROM users LEFT JOIN comments ON users.id = comments.user_id",
                         (user, comment) =>
@@ -32,9 +38,7 @@ namespace ORM.Dapper.Repositories
 
         public async Task<IEnumerable<User>> GetWhereUsernameLike(string username)
         {
-            using var connection = new SqlConnection(_connectionString);
-
-            var users = await connection.QueryAsync<User>
+            var users = await _connection.QueryAsync<User>
                 (
                     $"SELECT * FROM users WHERE username LIKE @{nameof(username)}",
                     new { username = "%" + username + "%" }
@@ -43,11 +47,21 @@ namespace ORM.Dapper.Repositories
             return users;
         }
 
+        public async Task<Guid> Create(User user)
+        {
+            var id = await _connection.ExecuteScalarAsync<Guid>
+                (
+                    $"DECLARE @IDENTITY UNIQUEIDENTIFIER; SET @IDENTITY = NEWID(); INSERT INTO users (id, username) VALUES(@IDENTITY, @{nameof(user.Username)}); SELECT @IDENTITY",
+                    user,
+                    _transaction
+                );
+
+            return id;
+        }
+
         public async Task<User> Get(Guid id)
         {
-            using var connection = new SqlConnection(_connectionString);
-
-            var user = await connection.QuerySingleOrDefaultAsync<User>
+            var user = await _connection.QuerySingleOrDefaultAsync<User>
                     (
                         $"SELECT * FROM users WHERE id = @{nameof(id)}",
                         new { id }
@@ -56,39 +70,23 @@ namespace ORM.Dapper.Repositories
             return user;
         }
 
-        public async Task Add(User user, DbTransaction transaction = null)
+        public async Task Update(User user)
         {
-            using var connection = new SqlConnection(_connectionString);
-
-            await connection.ExecuteAsync
-                (
-                    $"INSERT INTO users (username) VALUES(@{nameof(user.Username)})",
-                    user,
-                    transaction
-                );
-        }
-
-        public async Task Update(User user, DbTransaction transaction = null)
-        {
-            using var connection = new SqlConnection(_connectionString);
-
-            await connection.ExecuteAsync
+            await _connection.ExecuteAsync
                 (
                     $"UPDATE users SET username = @{nameof(user.Username)} WHERE id = @{nameof(user.Id)}",
                     user,
-                    transaction
+                    _transaction
                 );
         }
 
-        public async Task Delete(Guid id, DbTransaction transaction = null)
+        public async Task Delete(Guid id)
         {
-            using var connection = new SqlConnection(_connectionString);
-
-            await connection.ExecuteAsync
+            await _connection.ExecuteAsync
                 (
                     $"DELETE users WHERE id = @{nameof(id)}",
                     new { id },
-                    transaction
+                    _transaction
                 );
         }
     }

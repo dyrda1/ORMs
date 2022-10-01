@@ -1,9 +1,8 @@
-﻿using ORM.Dapper.Common;
-using ORMs.Domain.Entities;
+﻿using ORMs.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ORM.Dapper.Interfaces
+namespace ORM.Dapper.Common.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {

@@ -6,6 +6,12 @@ namespace ORMs.Domain.Entities
 {
     public class ProductParameters
     {
+        public ProductParameters()
+        {
+            Orders = new List<Order>();
+            Carts = new List<Cart>();
+        }
+
         public Guid Id { get; set; }
         public Color Color { get; set; }
         public Memory Memory { get; set; }
@@ -14,7 +20,7 @@ namespace ORMs.Domain.Entities
         public Guid ProductId { get; set; }
 
         public Product Product { get; set; }
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
-        public ICollection<Cart> Carts { get; set; } = new List<Cart>();
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<Cart> Carts { get; set; }
     }
 }
