@@ -6,7 +6,7 @@ namespace ORM.Dapper.Common.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {
-        Task<IEnumerable<User>> GetAllWithComments();
+        Task<IEnumerable<User>> GetAllWithMessages();
 
         Task<IEnumerable<User>> GetWhereUsernameLike(string username);
     }

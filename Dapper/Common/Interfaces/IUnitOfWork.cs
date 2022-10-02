@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Threading.Tasks;
 
 namespace ORM.Dapper.Common.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        public IProductParametersRepository ProductsParameters { get; }
-
-        public IProductRepository Products { get; }
+        //TODO: add repositories
 
         public IUserRepository Users { get; }
 
-        public Task Save();
+        public void Save();
     }
 }
