@@ -12,17 +12,7 @@ namespace ORM.Dapper.Common
                 .Key(x => x.Id, "id")
                 .Map(x => x.Username, "username")
                 .IgnoreOnMergeInsert(x => x.Id)
-                .Output(x => x.Id, "id")
-                .AfterAction((action, user) =>
-                {
-                    if (action == DapperPlusActionKind.Insert)
-                    {
-                        foreach (var folder in user.UserFolders)
-                        {
-                            folder.UserId = user.Id;
-                        }
-                    }
-                });
+                .Output(x => x.Id, "id");
         }
     }
 }

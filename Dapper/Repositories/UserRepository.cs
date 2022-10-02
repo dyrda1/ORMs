@@ -89,7 +89,7 @@ namespace ORM.Dapper.Repositories
 
         public async Task Create(User user)
         {
-            var userId = await _connection.ExecuteScalarAsync<Guid>
+            user.Id = await _connection.ExecuteScalarAsync<Guid>
                 (
                     $"DECLARE @IDENTITY UNIQUEIDENTIFIER; " +
                     $"SET @IDENTITY = NEWID(); " +
@@ -99,11 +99,6 @@ namespace ORM.Dapper.Repositories
                     user,
                     _transaction
                 );
-
-            foreach (var folder in user.UserFolders)
-            {
-                folder.UserId = userId;
-            }
         }
 
         public async Task CreateRange(IEnumerable<User> users)
