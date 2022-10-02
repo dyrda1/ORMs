@@ -5,16 +5,16 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using ORM.Dapper.Common.Interfaces;
-using System.Data;
+using Z.Dapper.Plus;
 
 namespace ORM.Dapper.Repositories
 {
     public class UserRepository : IUserRepository
     {
         private readonly SqlConnection _connection;
-        private readonly IDbTransaction _transaction;
+        private readonly SqlTransaction _transaction;
 
-        public UserRepository(SqlConnection connection, IDbTransaction transaction)
+        public UserRepository(SqlConnection connection, SqlTransaction transaction)
         {
             _connection = connection;
             _transaction = transaction;
@@ -47,6 +47,17 @@ namespace ORM.Dapper.Repositories
             return users;
         }
 
+        public async Task<User> Get(Guid id)
+        {
+            var user = await _connection.QuerySingleOrDefaultAsync<User>
+                    (
+                        $"SELECT * FROM users WHERE id = @{nameof(id)}",
+                        new { id }
+                    );
+
+            return user;
+        }
+
         public async Task<Guid> Create(User user)
         {
             var id = await _connection.ExecuteScalarAsync<Guid>
@@ -59,15 +70,9 @@ namespace ORM.Dapper.Repositories
             return id;
         }
 
-        public async Task<User> Get(Guid id)
+        public async Task CreateRange(IEnumerable<User> users)
         {
-            var user = await _connection.QuerySingleOrDefaultAsync<User>
-                    (
-                        $"SELECT * FROM users WHERE id = @{nameof(id)}",
-                        new { id }
-                    );
-
-            return user;
+            await _transaction.BulkActionAsync(x => x.BulkInsert(users));
         }
 
         public async Task Update(User user)
@@ -80,14 +85,24 @@ namespace ORM.Dapper.Repositories
                 );
         }
 
-        public async Task Delete(Guid id)
+        public async Task UpdateRange(IEnumerable<User> users)
+        {
+            await _transaction.BulkActionAsync(x => x.BulkUpdate(users));
+        }
+
+        public async Task Delete(User user)
         {
             await _connection.ExecuteAsync
                 (
-                    $"DELETE users WHERE id = @{nameof(id)}",
-                    new { id },
+                    $"DELETE users WHERE id = @{nameof(user.Id)}",
+                    user,
                     _transaction
                 );
+        }
+
+        public async Task DeleteRange(IEnumerable<User> users)
+        {
+            await _transaction.BulkActionAsync(x => x.BulkDelete(users));
         }
     }
 }

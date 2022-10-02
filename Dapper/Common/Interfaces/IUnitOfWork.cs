@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace ORM.Dapper.Common.Interfaces
 {
@@ -10,6 +11,6 @@ namespace ORM.Dapper.Common.Interfaces
 
         public IUserRepository Users { get; }
 
-        public void Commit();
+        public Task Save();
     }
 }

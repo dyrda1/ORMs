@@ -1,16 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ORM.Dapper.Common.Interfaces
 {
     public interface IRepository<T> where T : class
     {
+        Task<T> Get(Guid id);
+
         Task<Guid> Create(T entity);
 
-        Task<T> Get(Guid id);
+        Task CreateRange(IEnumerable<T> entities);
 
         Task Update(T entity);
 
-        Task Delete(Guid id);
+        Task UpdateRange(IEnumerable<T> entities);
+
+        Task Delete(T entity);
+
+        Task DeleteRange(IEnumerable<T> entities);
     }
 }

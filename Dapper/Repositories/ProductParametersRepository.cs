@@ -3,20 +3,32 @@ using Microsoft.Data.SqlClient;
 using ORM.Dapper.Common.Interfaces;
 using ORMs.Domain.Entities;
 using System;
-using System.Data;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Z.Dapper.Plus;
 
 namespace ORM.Dapper.Repositories
 {
     public class ProductParametersRepository : IProductParametersRepository
     {
         private readonly SqlConnection _connection;
-        private readonly IDbTransaction _transaction;
+        private readonly SqlTransaction _transaction;
 
-        public ProductParametersRepository(SqlConnection connection, IDbTransaction transaction)
+        public ProductParametersRepository(SqlConnection connection, SqlTransaction transaction)
         {
             _connection = connection;
             _transaction = transaction;
+        }
+
+        public async Task<ProductParameters> Get(Guid id)
+        {
+            var productParameters = await _connection.QuerySingleOrDefaultAsync<ProductParameters>
+                (
+                    $"SELECT * FROM product _parameters WHERE id = @{nameof(id)}",
+                    new { id }
+                );
+
+            return productParameters;
         }
 
         public async Task<Guid> Create(ProductParameters productParameters)
@@ -31,15 +43,9 @@ namespace ORM.Dapper.Repositories
             return id;
         }
 
-        public async Task<ProductParameters> Get(Guid id)
+        public async Task CreateRange(IEnumerable<ProductParameters> productsParameters)
         {
-            var productParameters = await _connection.QuerySingleOrDefaultAsync<ProductParameters>
-                (
-                    $"SELECT * FROM product _parameters WHERE id = @{nameof(id)}",
-                    new { id }
-                );
-
-            return productParameters;
+            await _transaction.BulkActionAsync(x => x.BulkInsert(productsParameters));
         }
 
         public async Task Update(ProductParameters productParameters)
@@ -52,14 +58,24 @@ namespace ORM.Dapper.Repositories
                 );
         }
 
-        public async Task Delete(Guid id)
+        public async Task UpdateRange(IEnumerable<ProductParameters> productsParameters)
+        {
+            await _transaction.BulkActionAsync(x => x.BulkUpdate(productsParameters));
+        }
+
+        public async Task Delete(ProductParameters productParameters)
         {
             await _connection.ExecuteAsync
                 (
-                    $"DELETE product_parameters WHERE id = @{nameof(id)}",
-                    new { id },
+                    $"DELETE product_parameters WHERE id = @{nameof(productParameters.Id)}",
+                    productParameters,
                     _transaction
                 );
+        }
+
+        public async Task DeleteRange(IEnumerable<ProductParameters> productsParameters)
+        {
+            await _transaction.BulkActionAsync(x => x.BulkDelete(productsParameters));
         }
     }
 }
