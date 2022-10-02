@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using ORM.Dapper.Interfaces;
-using ORM.Dapper.Repositories;
+using ORM.Dapper;
 
 namespace UI
 {
@@ -12,7 +11,7 @@ namespace UI
         {
             services.AddControllers();
 
-            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddDapper();
 
             services.AddSwaggerGen(c =>
             {
@@ -24,6 +23,8 @@ namespace UI
         {
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UI v1"));
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

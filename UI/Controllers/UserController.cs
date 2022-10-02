@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ORMs.Domain.Entities;
-using ORM.Dapper.Interfaces;
 using System.Threading.Tasks;
 using System;
+using ORM.Dapper.Common.Interfaces;
+using System.Collections.Generic;
 
 namespace UI.Controllers
 {
@@ -10,18 +11,18 @@ namespace UI.Controllers
     [Route("api/user")]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUnitOfWork unitOfWork)
         {
-            _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
         [Route("all")]
         public async Task<IActionResult> GetUsers()
         {
-            var users = await _userRepository.GetAllWithComments();
+            var users = await _unitOfWork.Users.GetAllWithComments();
 
             return Ok(users);
         }
@@ -30,7 +31,7 @@ namespace UI.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            var user = await _userRepository.Get(id);
+            var user = await _unitOfWork.Users.Get(id);
 
             return Ok(user);
         }
@@ -39,7 +40,7 @@ namespace UI.Controllers
         [Route("")]
         public async Task<IActionResult> Get(string username)
         {
-            var user = await _userRepository.GetWhereUsernameLike(username);
+            var user = await _unitOfWork.Users.GetWhereUsernameLike(username);
 
             return Ok(user);
         }
@@ -48,7 +49,18 @@ namespace UI.Controllers
         [Route("")]
         public async Task<IActionResult> Create(User user)
         {
-            await _userRepository.Add(user);
+            await _unitOfWork.Users.Create(user);
+            _unitOfWork.Save();
+
+            return StatusCode(201);
+        }
+
+        [HttpPost]
+        [Route("some")]
+        public async Task<IActionResult> Create(IEnumerable<User> users)
+        {
+            await _unitOfWork.Users.CreateRange(users);
+            _unitOfWork.Save();
 
             return StatusCode(201);
         }
@@ -57,7 +69,18 @@ namespace UI.Controllers
         [Route("")]
         public async Task<IActionResult> Update(User user)
         {
-            await _userRepository.Update(user);
+            await _unitOfWork.Users.Update(user);
+            _unitOfWork.Save();
+
+            return StatusCode(200);
+        }
+
+        [HttpPut]
+        [Route("some")]
+        public async Task<IActionResult> Update(IEnumerable<User> users)
+        {
+            await _unitOfWork.Users.UpdateRange(users);
+            _unitOfWork.Save();
 
             return StatusCode(200);
         }
@@ -66,7 +89,24 @@ namespace UI.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            await _userRepository.Delete(id);
+            var user = await _unitOfWork.Users.Get(id);
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            await _unitOfWork.Users.Delete(user);
+            _unitOfWork.Save();
+
+            return StatusCode(200);
+        }
+
+        [HttpDelete]
+        [Route("some")]
+        public async Task<IActionResult> Delete(IEnumerable<User> users)
+        {
+            await _unitOfWork.Users.DeleteRange(users);
+            _unitOfWork.Save();
 
             return StatusCode(200);
         }
