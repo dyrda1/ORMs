@@ -3,16 +3,18 @@ using System.Collections.Generic;
 
 namespace ORMs.Domain.Entities
 {
-    public class User
+    public class Folder
     {
-        public User()
+        public Folder()
         {
             UserFolders = new List<UserFolder>();
+            Messages = new List<Message>();
         }
 
         public Guid Id { get; set; }
-        public string Username { get; set; }
+        public string Name { get; set; }
 
         public ICollection<UserFolder> UserFolders { get; set; }
+        public ICollection<Message> Messages { get; set; }
     }
 }
