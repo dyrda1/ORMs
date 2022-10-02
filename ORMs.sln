@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{CC7C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORM.Dapper", "Dapper\ORM.Dapper.csproj", "{93143D0D-5913-4990-8025-857B7A057C82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMs.Domain", "ORMs.Domain\ORMs.Domain.csproj", "{5FE36BA4-36DC-47C5-8CBE-9FCA81B8A992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORMs.Domain", "ORMs.Domain\ORMs.Domain.csproj", "{5FE36BA4-36DC-47C5-8CBE-9FCA81B8A992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM.ADO.NET", "ORM.ADO.NET\ORM.ADO.NET.csproj", "{B158AD02-D86D-4734-98A9-9B0C034CA08C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5FE36BA4-36DC-47C5-8CBE-9FCA81B8A992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FE36BA4-36DC-47C5-8CBE-9FCA81B8A992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FE36BA4-36DC-47C5-8CBE-9FCA81B8A992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B158AD02-D86D-4734-98A9-9B0C034CA08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B158AD02-D86D-4734-98A9-9B0C034CA08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B158AD02-D86D-4734-98A9-9B0C034CA08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B158AD02-D86D-4734-98A9-9B0C034CA08C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

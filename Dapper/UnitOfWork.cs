@@ -1,4 +1,5 @@
 ﻿using ORM.Dapper.Common.Interfaces;
+using System;
 using System.Data;
 
 namespace ORM.Dapper
@@ -38,9 +39,11 @@ namespace ORM.Dapper
             }
         }
 
-        public void Dispose() //TODO: Rewrite
+        public void Dispose()
         {
+            _dbTransaction.Connection?.Dispose();
             _dbTransaction.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
