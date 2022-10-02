@@ -5,8 +5,8 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using ORM.Dapper.Common.Interfaces;
-using Z.Dapper.Plus;
 using System.Data;
+using Z.Dapper.Plus;
 
 namespace ORM.Dapper.Repositories
 {
@@ -14,40 +14,49 @@ namespace ORM.Dapper.Repositories
     {
         private readonly SqlConnection _connection;
         private readonly IDbTransaction _transaction;
+        private readonly DapperPlusContext _dapperPlusContext;
 
-        public UserRepository(SqlConnection connection, IDbTransaction transaction)
+        public UserRepository
+            (
+                SqlConnection connection,
+                IDbTransaction transaction,
+                DapperPlusContext dapperPlusContext
+            )
         {
             _connection = connection;
             _transaction = transaction;
 
-            //DapperPlusManager.Entity<User>("UserMapping")
-            //    .Table("users")
-            //    .IgnoreOnMergeInsert(x => x.Id)
-            //    .Key(x => x.Id, "id")
-            //    .Map(x => x.Username, "username")
-            //    .Output(x => x.Id, "id")
-            //    .AfterAction((action, user) =>
-            //    {
-            //        if (action == DapperPlusActionKind.Insert)
-            //        {
-
-            //        }
-            //    });
+            _dapperPlusContext = dapperPlusContext;
+            _dapperPlusContext.Connection = connection;
+            _dapperPlusContext.Transaction = transaction;
         }
 
-        public async Task<IEnumerable<User>> GetAllWithComments()
+        public async Task<IEnumerable<User>> GetAllWithMessages()
         {
-            var users = await _connection.QueryAsync<User, Comment, User>
-                (
-                    "SELECT * FROM users LEFT JOIN comments ON users.id = comments.user_id",
-                    (user, comment) =>
-                    {
-                        if (comment != null)
-                            user.Comments.Add(comment);
-                        return user;
-                    }, 
-                    transaction: _transaction
-                );
+            var users = await _connection.QueryAsync<User, UserFolder, Folder, Message, User>
+                    (
+                        "SELECT * FROM users " +
+                        "LEFT JOIN users_folders ON users.id = users_folders.user_id " +
+                        "LEFT JOIN folders ON folders.id = users_folders.folder_id " +
+                        "LEFT JOIN messages ON messages.folder_id = folders.id",
+                        (user, userFolder, folder, message) =>
+                        {
+                            if (userFolder != null)
+                            {
+                                user.UserFolders.Add(userFolder);
+                                if (folder != null)
+                                {
+                                    userFolder.Folder = folder;
+                                    if (message != null)
+                                        folder.Messages.Add(message);
+                                }
+                            }
+
+                            return user;
+                        },
+                        splitOn: "user_id, id, id",
+                        transaction: _transaction
+                    );
 
             return users;
         }
@@ -56,7 +65,8 @@ namespace ORM.Dapper.Repositories
         {
             var users = await _connection.QueryAsync<User>
                 (
-                    $"SELECT * FROM users WHERE username LIKE @{nameof(username)}",
+                    $"SELECT * FROM users " +
+                    $"WHERE username LIKE @{nameof(username)}",
                     new { username = "%" + username + "%" },
                     transaction: _transaction
                 );
@@ -68,7 +78,8 @@ namespace ORM.Dapper.Repositories
         {
             var user = await _connection.QuerySingleOrDefaultAsync<User>
                 (
-                    $"SELECT * FROM users WHERE id = @{nameof(id)}",
+                    $"SELECT * FROM users " +
+                    $"WHERE id = @{nameof(id)}",
                     new { id },
                     transaction: _transaction
                 );
@@ -78,37 +89,35 @@ namespace ORM.Dapper.Repositories
 
         public async Task Create(User user)
         {
-            var id = await _connection.ExecuteScalarAsync<Guid>
+            var userId = await _connection.ExecuteScalarAsync<Guid>
                 (
-                    $"DECLARE @IDENTITY UNIQUEIDENTIFIER; SET @IDENTITY = NEWID(); INSERT INTO users (id, username) VALUES(@IDENTITY, @{nameof(user.Username)}); SELECT @IDENTITY",
+                    $"DECLARE @IDENTITY UNIQUEIDENTIFIER; " +
+                    $"SET @IDENTITY = NEWID(); " +
+                    $"INSERT INTO users (id, username) " +
+                    $"VALUES(@IDENTITY, @{nameof(user.Username)}); " +
+                    $"SELECT @IDENTITY",
                     user,
                     _transaction
                 );
 
-            foreach (var order in user.Orders)
+            foreach (var folder in user.UserFolders)
             {
-                order.UserId = id;
-            }
-            foreach (var cart in user.Carts)
-            {
-                cart.UserId = id;
-            }
-            foreach (var comment in user.Comments)
-            {
-                comment.UserId = id;
+                folder.UserId = userId;
             }
         }
-        
+
         public async Task CreateRange(IEnumerable<User> users)
         {
-            await _transaction.BulkActionAsync(x => x.BulkInsert("UserMapping", users));
+            await _dapperPlusContext.BulkActionAsync(x => x.BulkInsert(users));
         }
 
         public async Task Update(User user)
         {
             await _connection.ExecuteAsync
                 (
-                    $"UPDATE users SET username = @{nameof(user.Username)} WHERE id = @{nameof(user.Id)}",
+                    $"UPDATE users SET " +
+                    $"username = @{nameof(user.Username)} " +
+                    $"WHERE id = @{nameof(user.Id)}",
                     user,
                     _transaction
                 );
@@ -116,14 +125,15 @@ namespace ORM.Dapper.Repositories
 
         public async Task UpdateRange(IEnumerable<User> users)
         {
-            await _transaction.BulkActionAsync(x => x.BulkUpdate("UserMapping", users));
+            await _dapperPlusContext.BulkActionAsync(x => x.BulkUpdate(users));
         }
 
         public async Task Delete(User user)
         {
             await _connection.ExecuteAsync
                 (
-                    $"DELETE users WHERE id = @{nameof(user.Id)}",
+                    $"DELETE users " +
+                    $"WHERE id = @{nameof(user.Id)}",
                     user,
                     _transaction
                 );
@@ -131,7 +141,7 @@ namespace ORM.Dapper.Repositories
 
         public async Task DeleteRange(IEnumerable<User> users)
         {
-            await _transaction.BulkActionAsync(x => x.BulkDelete("UserMapping", users));
+            await _dapperPlusContext.BulkActionAsync(x => x.BulkDelete(users));
         }
     }
 }

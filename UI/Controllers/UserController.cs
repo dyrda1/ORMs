@@ -22,7 +22,7 @@ namespace UI.Controllers
         [Route("all")]
         public async Task<IActionResult> GetUsers()
         {
-            var users = await _unitOfWork.Users.GetAllWithComments();
+            var users = await _unitOfWork.Users.GetAllWithMessages();
 
             return Ok(users);
         }

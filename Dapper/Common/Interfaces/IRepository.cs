@@ -8,7 +8,7 @@ namespace ORM.Dapper.Common.Interfaces
     {
         Task<T> Get(Guid id);
 
-        Task<Guid> Create(T entity);
+        Task Create(T entity);
 
         Task CreateRange(IEnumerable<T> entities);
 

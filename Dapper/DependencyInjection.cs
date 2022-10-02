@@ -1,9 +1,11 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ORM.Dapper.Common;
 using ORM.Dapper.Common.Interfaces;
 using ORM.Dapper.Repositories;
 using System.Data;
+using Z.Dapper.Plus;
 
 namespace ORM.Dapper
 {
@@ -11,9 +13,11 @@ namespace ORM.Dapper
     {
         public static IServiceCollection AddDapper(this IServiceCollection services)
         {
+            services.AddSingleton<DapperPlusContext, MessengerContext>();
+
             services.AddTransient<IUserRepository, UserRepository>();
 
-            services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped(x =>
             {

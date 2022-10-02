@@ -6,6 +6,7 @@ namespace ORMs.Domain.Entities
     {
         public Guid Id { get; set; }
         public string Text { get; set; }
+        public Guid FolderId { get; set; }
 
         public Folder Folder { get; set; }
     }
