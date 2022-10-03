@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dapper\ORM.Dapper.csproj" />
+    <ProjectReference Include="..\ORM.ADO.NET\ORM.ADO.NET.csproj" />
   </ItemGroup>
 
 </Project>
