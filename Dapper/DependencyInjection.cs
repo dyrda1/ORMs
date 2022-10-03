@@ -27,7 +27,7 @@ namespace ORM.Dapper
                 return connection;
             });
 
-            services.AddScoped<IDbTransaction>(s =>
+            services.AddScoped(s =>
             {
                 var connection = s.GetRequiredService<SqlConnection>();
                 connection.Open();

@@ -50,7 +50,7 @@ namespace UI.Controllers
         public async Task<IActionResult> Create(User user)
         {
             await _unitOfWork.Users.Create(user);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(201);
         }
@@ -60,7 +60,7 @@ namespace UI.Controllers
         public async Task<IActionResult> Create(IEnumerable<User> users)
         {
             await _unitOfWork.Users.CreateRange(users);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(201);
         }
@@ -70,7 +70,7 @@ namespace UI.Controllers
         public async Task<IActionResult> Update(User user)
         {
             await _unitOfWork.Users.Update(user);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(200);
         }
@@ -80,7 +80,7 @@ namespace UI.Controllers
         public async Task<IActionResult> Update(IEnumerable<User> users)
         {
             await _unitOfWork.Users.UpdateRange(users);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(200);
         }
@@ -96,7 +96,7 @@ namespace UI.Controllers
             }
 
             await _unitOfWork.Users.Delete(user);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(200);
         }
@@ -106,7 +106,7 @@ namespace UI.Controllers
         public async Task<IActionResult> Delete(IEnumerable<User> users)
         {
             await _unitOfWork.Users.DeleteRange(users);
-            _unitOfWork.Save();
+            await _unitOfWork.Save();
 
             return StatusCode(200);
         }

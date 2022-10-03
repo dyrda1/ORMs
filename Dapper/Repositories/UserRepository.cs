@@ -5,7 +5,6 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using ORM.Dapper.Common.Interfaces;
-using System.Data;
 using Z.Dapper.Plus;
 
 namespace ORM.Dapper.Repositories
@@ -13,13 +12,13 @@ namespace ORM.Dapper.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly SqlConnection _connection;
-        private readonly IDbTransaction _transaction;
+        private readonly SqlTransaction _transaction;
         private readonly DapperPlusContext _dapperPlusContext;
 
         public UserRepository
             (
                 SqlConnection connection,
-                IDbTransaction transaction,
+                SqlTransaction transaction,
                 DapperPlusContext dapperPlusContext
             )
         {

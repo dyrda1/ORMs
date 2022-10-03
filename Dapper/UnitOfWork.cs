@@ -1,17 +1,18 @@
-﻿using ORM.Dapper.Common.Interfaces;
+﻿using Microsoft.Data.SqlClient;
+using ORM.Dapper.Common.Interfaces;
 using System;
-using System.Data;
+using System.Threading.Tasks;
 
 namespace ORM.Dapper
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly IDbTransaction _dbTransaction;
+        private readonly SqlTransaction _dbTransaction;
         private readonly IUserRepository _userRepository; 
 
         public UnitOfWork
             (
-                IDbTransaction dbTransaction,
+                SqlTransaction dbTransaction,
                 IUserRepository userRepository
             )
         {
@@ -27,15 +28,15 @@ namespace ORM.Dapper
             }
         }
 
-        public void Save()
+        public async Task Save()
         {
             try
             {
-                _dbTransaction.Commit();
+                await _dbTransaction.CommitAsync();
             }
             catch
             {
-                _dbTransaction.Rollback();
+                await _dbTransaction.RollbackAsync();
             }
         }
 
@@ -43,6 +44,7 @@ namespace ORM.Dapper
         {
             _dbTransaction.Connection?.Dispose();
             _dbTransaction.Dispose();
+
             GC.SuppressFinalize(this);
         }
     }
