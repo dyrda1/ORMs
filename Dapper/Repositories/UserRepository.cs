@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ORM.Dapper.Common.Interfaces;
 using Z.Dapper.Plus;
+using System.Linq;
 
 namespace ORM.Dapper.Repositories
 {
@@ -40,15 +41,11 @@ namespace ORM.Dapper.Repositories
                         "LEFT JOIN messages ON messages.folder_id = folders.id",
                         (user, userFolder, folder, message) =>
                         {
-                            if (userFolder != null)
+                            if (folder != null)
                             {
-                                user.UserFolders.Add(userFolder);
-                                if (folder != null)
-                                {
-                                    userFolder.Folder = folder;
-                                    if (message != null)
-                                        folder.Messages.Add(message);
-                                }
+                                user.Folders.Add(folder);
+                                if (message != null)
+                                    folder.Messages.Add(message);
                             }
 
                             return user;
@@ -56,6 +53,19 @@ namespace ORM.Dapper.Repositories
                         splitOn: "user_id, id, id",
                         transaction: _transaction
                     );
+
+            users = users.GroupBy(x => new { x.Id, x.Username }).Select(x => new User
+            {
+                Id = x.Key.Id,
+                Username = x.Key.Username,
+                Folders = x.SelectMany(z => z.Folders).GroupBy(z => new { z.Id, z.Name }).Select(z => new Folder
+                {
+                    Id = z.Key.Id,
+                    Name = z.Key.Name,
+                    Messages = z.SelectMany(k => k.Messages).ToList()
+                })
+                .ToList()
+            });
 
             return users;
         }

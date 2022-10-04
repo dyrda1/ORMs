@@ -9,6 +9,7 @@ namespace ORMs.Domain.Entities
         {
             UserFolders = new List<UserFolder>();
             Messages = new List<Message>();
+            Users = new List<User>();
         }
 
         public Guid Id { get; set; }
@@ -16,5 +17,6 @@ namespace ORMs.Domain.Entities
 
         public ICollection<UserFolder> UserFolders { get; set; }
         public ICollection<Message> Messages { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }
