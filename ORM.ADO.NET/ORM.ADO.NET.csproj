@@ -13,9 +13,5 @@
   <ItemGroup>
     <ProjectReference Include="..\ORMs.Domain\ORMs.Domain.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
 	
 </Project>

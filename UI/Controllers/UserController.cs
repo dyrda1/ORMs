@@ -2,7 +2,8 @@
 using ORMs.Domain.Entities;
 using System.Threading.Tasks;
 using System;
-using ORM.Dapper.Common.Interfaces;
+//using ORM.Dapper.Common.Interfaces;
+using ORM.ADO.NET.Common.Interfaces;
 using System.Collections.Generic;
 
 namespace UI.Controllers

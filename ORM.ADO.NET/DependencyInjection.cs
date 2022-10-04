@@ -1,6 +1,8 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ORM.ADO.NET.Common.Interfaces;
+using ORM.ADO.NET.Repositories;
 
 namespace ORM.ADO.NET
 {
