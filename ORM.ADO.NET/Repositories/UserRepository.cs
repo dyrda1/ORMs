@@ -152,8 +152,8 @@ namespace ORM.ADO.NET.Repositories
         public async Task CreateRange(IEnumerable<User> users)
         {
             var table = new DataTable();
-            var idColumn = new DataColumn("id");
-            var usernameColumn = new DataColumn("username");
+            var idColumn = new DataColumn("id", typeof(Guid));
+            var usernameColumn = new DataColumn("username", typeof(string));
             table.Columns.AddRange(new[] { idColumn, usernameColumn });
             foreach (var user in users)
             {
