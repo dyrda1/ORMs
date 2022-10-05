@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using ORM.Dapper.Common.Interfaces;
 using Z.Dapper.Plus;
 using System.Linq;
+using System.Data;
 
 namespace ORM.Dapper.Repositories
 {
@@ -98,16 +99,20 @@ namespace ORM.Dapper.Repositories
 
         public async Task Create(User user)
         {
-            user.Id = await _connection.ExecuteScalarAsync<Guid>
+            var parameters = new DynamicParameters();
+            parameters.Add($"@{nameof(user.Id)}", user.Id, direction: ParameterDirection.Output);
+            parameters.Add($"@{nameof(user.Username)}", user.Username);
+
+            await _connection.ExecuteAsync
                 (
-                    $"DECLARE @IDENTITY UNIQUEIDENTIFIER; " +
-                    $"SET @IDENTITY = NEWID(); " +
+                    $"SET @{nameof(user.Id)} = NEWID(); " +
                     $"INSERT INTO users (id, username) " +
-                    $"VALUES(@IDENTITY, @{nameof(user.Username)}); " +
-                    $"SELECT @IDENTITY",
-                    user,
+                    $"VALUES(@{nameof(user.Id)}, @{nameof(user.Username)})",
+                    parameters,
                     _transaction
                 );
+
+            user.Id = parameters.Get<Guid>($"@{nameof(user.Id)}");
         }
 
         public async Task CreateRange(IEnumerable<User> users)
