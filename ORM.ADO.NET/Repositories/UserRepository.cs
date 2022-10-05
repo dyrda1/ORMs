@@ -151,7 +151,24 @@ namespace ORM.ADO.NET.Repositories
 
         public async Task CreateRange(IEnumerable<User> users)
         {
+            var table = new DataTable();
+            var idColumn = new DataColumn("id");
+            var usernameColumn = new DataColumn("username");
+            table.Columns.AddRange(new[] { idColumn, usernameColumn });
+            foreach (var user in users)
+            {
+                var row = new object[]
+                {
+                    user.Id = Guid.NewGuid(),
+                    user.Username
+                };
+                table.Rows.Add(row);
+            }
 
+            using var bulkCopy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.CheckConstraints, _transaction);
+            bulkCopy.DestinationTableName = "users";
+
+            await bulkCopy.WriteToServerAsync(table);
         }
 
         public async Task Update(User user)
@@ -172,7 +189,37 @@ namespace ORM.ADO.NET.Repositories
 
         public async Task UpdateRange(IEnumerable<User> users)
         {
-            throw new NotImplementedException();
+            var table = new DataTable();
+            var idColumn = new DataColumn("id", typeof(Guid));
+            var usernameColumn = new DataColumn("username", typeof(string));
+            table.Columns.AddRange(new[] { idColumn, usernameColumn });
+            foreach (var user in users)
+            {
+                var row = new object[]
+                {
+                    user.Id,
+                    user.Username
+                };
+                table.Rows.Add(row);
+            }
+
+            using var command = _connection.CreateCommand();
+            command.Transaction = _transaction;
+
+            command.CommandText = "CREATE TABLE #TmpTable(id UNIQUEIDENTIFIER, username NVARCHAR(50))";
+            command.ExecuteNonQuery();
+
+            using var bulkCopy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.CheckConstraints, _transaction);
+            bulkCopy.DestinationTableName = "#TmpTable";
+
+            await bulkCopy.WriteToServerAsync(table);
+
+            command.CommandText = "UPDATE users SET " +
+                "username = #TmpTable.username FROM users " +
+                "INNER JOIN #TmpTable ON users.id = #TmpTable.id; " +
+                "DROP TABLE #TmpTable";
+
+            await command.ExecuteNonQueryAsync();
         }
 
         public async Task Delete(User user)
@@ -191,7 +238,36 @@ namespace ORM.ADO.NET.Repositories
 
         public async Task DeleteRange(IEnumerable<User> users)
         {
-            throw new NotImplementedException();
+            var table = new DataTable();
+            var idColumn = new DataColumn("id", typeof(Guid));
+            var usernameColumn = new DataColumn("username", typeof(string));
+            table.Columns.AddRange(new[] { idColumn, usernameColumn });
+            foreach (var user in users)
+            {
+                var row = new object[]
+                {
+                    user.Id,
+                    user.Username
+                };
+                table.Rows.Add(row);
+            }
+
+            using var command = _connection.CreateCommand();
+            command.Transaction = _transaction;
+
+            command.CommandText = "CREATE TABLE #TmpTable(id UNIQUEIDENTIFIER, username NVARCHAR(50))";
+            command.ExecuteNonQuery();
+
+            using var bulkCopy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.CheckConstraints, _transaction);
+            bulkCopy.DestinationTableName = "#TmpTable";
+
+            await bulkCopy.WriteToServerAsync(table);
+
+            command.CommandText = "DELETE users FROM users " +
+                "INNER JOIN #TmpTable ON users.id = #TmpTable.id; " +
+                "DROP TABLE #TmpTable";
+
+            await command.ExecuteNonQueryAsync();
         }
     }
 }
