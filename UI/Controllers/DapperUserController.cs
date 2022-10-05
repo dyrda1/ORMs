@@ -2,19 +2,18 @@
 using ORMs.Domain.Entities;
 using System.Threading.Tasks;
 using System;
-//using ORM.Dapper.Common.Interfaces;
-using ORM.ADO.NET.Common.Interfaces;
+using ORM.Dapper.Common.Interfaces;
 using System.Collections.Generic;
 
 namespace UI.Controllers
 {
     [ApiController]
-    [Route("api/user")]
-    public class UserController : ControllerBase
+    [Route("api/dapper/user")]
+    public class DapperUserController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public UserController(IUnitOfWork unitOfWork)
+        public DapperUserController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

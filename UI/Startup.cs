@@ -14,7 +14,7 @@ namespace UI
         {
             services.AddControllers();
 
-            services.AddDapper();
+            //services.AddDapper();
             services.AddAdoNet();
 
             services.AddSwaggerGen(c =>

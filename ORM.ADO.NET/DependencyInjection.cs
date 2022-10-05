@@ -22,12 +22,13 @@ namespace ORM.ADO.NET
                 return connection;
             });
 
-            services.AddScoped(x =>
+            services.AddScoped(s =>
             {
-                var config = x.GetRequiredService<IConfiguration>();
-                var connection = new SqlConnection(config.GetConnectionString("Default"));
+                var connection = s.GetRequiredService<SqlConnection>();
+                connection.Open();
+                var transaction = connection.BeginTransaction();
 
-                return connection;
+                return transaction;
             });
 
             return services;
