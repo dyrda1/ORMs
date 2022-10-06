@@ -21,6 +21,7 @@ namespace ORM.EntityFrameworkCore.Configurations
                 .IsRequired();
 
             builder.Property(x => x.FolderId)
+                .HasColumnName("folder_id")
                 .IsRequired();
 
             builder.HasKey(x => x.Id);
@@ -31,6 +32,7 @@ namespace ORM.EntityFrameworkCore.Configurations
 
             builder.HasOne(x => x.Folder)
                 .WithMany(x => x.Messages)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasForeignKey(x => x.FolderId);
         }
     }

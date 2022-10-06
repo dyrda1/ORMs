@@ -6,7 +6,7 @@ namespace ORM.EntityFrameworkCore
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddDapper(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddEntityFramework(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<MessengerDbContext>(options =>
             {

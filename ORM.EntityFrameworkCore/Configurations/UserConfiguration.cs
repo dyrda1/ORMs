@@ -22,8 +22,6 @@ namespace ORM.EntityFrameworkCore.Configurations
 
             builder.HasKey(x => x.Id);
 
-            builder.HasAlternateKey(x => x.Username);
-
             builder.HasIndex(x => x.Id)
                 .IsClustered()
                 .IsUnique();
@@ -38,10 +36,12 @@ namespace ORM.EntityFrameworkCore.Configurations
                 x => x
                 .HasOne(x => x.Folder)
                 .WithMany(x => x.UserFolders)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasForeignKey(x => x.FolderId),
                 x => x
                 .HasOne(x => x.User)
                 .WithMany(x => x.UserFolders)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasForeignKey(x => x.UserId),
                 x =>
                 {
