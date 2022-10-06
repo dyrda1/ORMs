@@ -207,7 +207,7 @@ namespace ORM.ADO.NET.Repositories
             command.Transaction = _transaction;
 
             command.CommandText = "CREATE TABLE #TmpTable(id UNIQUEIDENTIFIER, username NVARCHAR(50))";
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
 
             using var bulkCopy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.CheckConstraints, _transaction);
             bulkCopy.DestinationTableName = "#TmpTable";
@@ -256,7 +256,7 @@ namespace ORM.ADO.NET.Repositories
             command.Transaction = _transaction;
 
             command.CommandText = "CREATE TABLE #TmpTable(id UNIQUEIDENTIFIER, username NVARCHAR(50))";
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
 
             using var bulkCopy = new SqlBulkCopy(_connection, SqlBulkCopyOptions.CheckConstraints, _transaction);
             bulkCopy.DestinationTableName = "#TmpTable";

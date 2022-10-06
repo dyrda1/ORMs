@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORMs.Domain", "ORMs.Domain\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORM.ADO.NET", "ORM.ADO.NET\ORM.ADO.NET.csproj", "{B158AD02-D86D-4734-98A9-9B0C034CA08C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMs.Benchmark", "ORMs.Benchmark\ORMs.Benchmark.csproj", "{CACC10DB-16F6-4076-B81F-2675CF5DF4AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORMs.Benchmark", "ORMs.Benchmark\ORMs.Benchmark.csproj", "{CACC10DB-16F6-4076-B81F-2675CF5DF4AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM.EntityFrameworkCore", "ORM.EntityFrameworkCore\ORM.EntityFrameworkCore.csproj", "{FF43D002-2652-4C64-B80B-1B333D3F27C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CACC10DB-16F6-4076-B81F-2675CF5DF4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CACC10DB-16F6-4076-B81F-2675CF5DF4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CACC10DB-16F6-4076-B81F-2675CF5DF4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF43D002-2652-4C64-B80B-1B333D3F27C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF43D002-2652-4C64-B80B-1B333D3F27C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF43D002-2652-4C64-B80B-1B333D3F27C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF43D002-2652-4C64-B80B-1B333D3F27C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
