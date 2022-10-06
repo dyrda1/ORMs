@@ -28,6 +28,14 @@ namespace ORMs.Benchmark
             return await client.GetFromJsonAsync<IEnumerable<User>>($"https://localhost:44379/api/dapper/user/all");
         }
 
+        public async Task<IEnumerable<User>> GetGetUsersWithMessagesEntityFramework()
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            return await client.GetFromJsonAsync<IEnumerable<User>>($"https://localhost:44379/api/entity-framework/user/all");
+        }
+
         public async Task<IEnumerable<User>> GetWhereUsernameLikeAdoNet(string username)
         {
             client.DefaultRequestHeaders.Accept.Clear();
@@ -44,6 +52,14 @@ namespace ORMs.Benchmark
             return await client.GetFromJsonAsync<IEnumerable<User>>($"https://localhost:44379/api/dapper/user?username={username}");
         }
 
+        public async Task<IEnumerable<User>> GetWhereUsernameLikeEntityFramework(string username)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            return await client.GetFromJsonAsync<IEnumerable<User>>($"https://localhost:44379/api/entity-framework/user?username={username}");
+        }
+
         public async Task<User> GetUserAdoNet(Guid id)
         {
             client.DefaultRequestHeaders.Accept.Clear();
@@ -58,6 +74,14 @@ namespace ORMs.Benchmark
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             return await client.GetFromJsonAsync<User>($"https://localhost:44379/api/dapper/user/{id}");
+        }
+
+        public async Task<User> GetUserEntityFramework(Guid id)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            return await client.GetFromJsonAsync<User>($"https://localhost:44379/api/entity-framework/user/{id}");
         }
 
         public async Task CreateUserAdoNet(User user)
@@ -80,6 +104,16 @@ namespace ORMs.Benchmark
             await client.PostAsync($"https://localhost:44379/api/dapper/user", userJson);
         }
 
+        public async Task CreateUserEntityFramework(User user)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var userJson = JsonContent.Create(user);
+
+            await client.PostAsync($"https://localhost:44379/api/entity-framework/user", userJson);
+        }
+
         public async Task CreateUsersAdoNet(List<User> users)
         {
             client.DefaultRequestHeaders.Accept.Clear();
@@ -98,6 +132,16 @@ namespace ORMs.Benchmark
             var userJson = JsonContent.Create(users);
 
             await client.PostAsync($"https://localhost:44379/api/dapper/user/some", userJson);
+        }
+
+        public async Task CreateUsersEntityFramework(List<User> users)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var userJson = JsonContent.Create(users);
+
+            await client.PostAsync($"https://localhost:44379/api/entity-framework/user/some", userJson);
         }
 
         public async Task UpdateUserAdoNet(User user)
@@ -120,6 +164,16 @@ namespace ORMs.Benchmark
             await client.PutAsync($"https://localhost:44379/api/dapper/user", userJson);
         }
 
+        public async Task UpdateUserEntityFramework(User user)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var userJson = JsonContent.Create(user);
+
+            await client.PutAsync($"https://localhost:44379/api/entity-framework/user", userJson);
+        }
+
         public async Task UpdateUsersAdoNet(List<User> users)
         {
             client.DefaultRequestHeaders.Accept.Clear();
@@ -140,6 +194,16 @@ namespace ORMs.Benchmark
             await client.PutAsync($"https://localhost:44379/api/dapper/user/some", userJson);
         }
 
+        public async Task UpdateUsersEntityFramework(List<User> users)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var userJson = JsonContent.Create(users);
+
+            await client.PutAsync($"https://localhost:44379/api/entity-framework/user/some", userJson);
+        }
+
         public async Task DeleteUserAdoNet(Guid id)
         {
             client.DefaultRequestHeaders.Accept.Clear();
@@ -154,6 +218,13 @@ namespace ORMs.Benchmark
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             await client.DeleteAsync($"https://localhost:44379/api/dapper/user/{id}");
+        }
+        public async Task DeleteUserEntityFramework(Guid id)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            await client.DeleteAsync($"https://localhost:44379/api/entity-framework/user/{id}");
         }
     }
 }

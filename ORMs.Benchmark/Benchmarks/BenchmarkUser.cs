@@ -32,6 +32,15 @@ namespace ORMs.Benchmark.Benchmarks
         //}
 
         //[Benchmark]
+        //public async Task RestGetUsersWithMessagesEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetGetUsersWithMessagesEntityFramework();
+        //    }
+        //}
+
+        //[Benchmark]
         //public async Task GetWhereUsernameLikeDapper()
         //{
         //    for (int i = 0; i < IterationCount; i++)
@@ -46,6 +55,15 @@ namespace ORMs.Benchmark.Benchmarks
         //    for (int i = 0; i < IterationCount; i++)
         //    {
         //        await _restClient.GetWhereUsernameLikeAdoNet("@");
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task GetWhereUsernameLikeEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetWhereUsernameLikeEntityFramework("@");
         //    }
         //}
 
@@ -68,6 +86,15 @@ namespace ORMs.Benchmark.Benchmarks
         //}
 
         //[Benchmark]
+        //public async Task GetUserEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetUserEntityFramework(Guid.Parse("9979C25A-C566-4205-8435-8DD95CFF0CB7"));
+        //    }
+        //}
+
+        //[Benchmark]
         //public async Task RestCreateUserAdoNet()
         //{
         //    for (int i = 0; i < IterationCount; i++)
@@ -82,6 +109,15 @@ namespace ORMs.Benchmark.Benchmarks
         //    for (int i = 0; i < IterationCount; i++)
         //    {
         //        await _restClient.CreateUserDapper(new User { Username = $"user{Guid.NewGuid()}@gmail.com" });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestCreateUserEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.CreateUserEntityFramework(new User { Username = $"user{Guid.NewGuid()}@gmail.com" });
         //    }
         //}
 
@@ -104,6 +140,15 @@ namespace ORMs.Benchmark.Benchmarks
         //}
 
         //[Benchmark]
+        //public async Task RestCreateUsersEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.CreateUsersEntityFramework(new List<User> { new User { Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
+        //[Benchmark]
         //public async Task RestUpdateUserAdoNet()
         //{
         //    for (int i = 0; i < IterationCount; i++)
@@ -118,6 +163,15 @@ namespace ORMs.Benchmark.Benchmarks
         //    for (int i = 0; i < IterationCount; i++)
         //    {
         //        await _restClient.UpdateUserDapper(new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestUpdateUserEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUserEntityFramework(new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" });
         //    }
         //}
 
@@ -139,6 +193,15 @@ namespace ORMs.Benchmark.Benchmarks
         //    }
         //}
 
+        //[Benchmark]
+        //public async Task RestUpdateUsersEntityFramework()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUsersEntityFramework(new List<User> { new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
         [Benchmark]
         public async Task ResDeleteUserAdoNet()
         {
@@ -154,6 +217,15 @@ namespace ORMs.Benchmark.Benchmarks
             for (int i = 0; i < IterationCount; i++)
             {
                 await _restClient.DeleteUserDapper(Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"));
+            }
+        }
+
+        [Benchmark]
+        public async Task RestDeleteUserEntityFramework()
+        {
+            for (int i = 0; i < IterationCount; i++)
+            {
+                await _restClient.DeleteUserEntityFramework(Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"));
             }
         }
     }
