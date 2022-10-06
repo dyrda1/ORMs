@@ -32,6 +32,42 @@ namespace ORMs.Benchmark.Benchmarks
         //}
 
         //[Benchmark]
+        //public async Task GetWhereUsernameLikeDapper()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetWhereUsernameLikeDapper("@");
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task GetWhereUsernameLikeAdoNet()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetWhereUsernameLikeAdoNet("@");
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task GetUserDapper()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetUserDapper(Guid.Parse("9979C25A-C566-4205-8435-8DD95CFF0CB7"));
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task GetUserAdoNet()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.GetUserAdoNet(Guid.Parse("9979C25A-C566-4205-8435-8DD95CFF0CB7"));
+        //    }
+        //}
+
+        //[Benchmark]
         //public async Task RestCreateUserAdoNet()
         //{
         //    for (int i = 0; i < IterationCount; i++)
@@ -49,21 +85,75 @@ namespace ORMs.Benchmark.Benchmarks
         //    }
         //}
 
+        //[Benchmark]
+        //public async Task RestCreateUsersAdoNet()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.CreateUsersAdoNet(new List<User> { new User { Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestCreateUsersDapper()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.CreateUsersDapper(new List<User> { new User { Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestUpdateUserAdoNet()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUserAdoNet(new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestUpdateUserDapper()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUserDapper(new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestUpdateUsersAdoNet()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUsersAdoNet(new List<User> { new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
+        //[Benchmark]
+        //public async Task RestUpdateUsersDapper()
+        //{
+        //    for (int i = 0; i < IterationCount; i++)
+        //    {
+        //        await _restClient.UpdateUsersDapper(new List<User> { new User { Id = Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"), Username = $"user{Guid.NewGuid()}@gmail.com" } });
+        //    }
+        //}
+
         [Benchmark]
-        public async Task GetWhereUsernameLikeDapper()
+        public async Task ResDeleteUserAdoNet()
         {
             for (int i = 0; i < IterationCount; i++)
             {
-                await _restClient.GetWhereUsernameLikeDapper("@");
+                await _restClient.DeleteUserAdoNet(Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"));
             }
         }
 
         [Benchmark]
-        public async Task GetWhereUsernameLikeAdoNet()
+        public async Task RestDeleteUserDapper()
         {
             for (int i = 0; i < IterationCount; i++)
             {
-                await _restClient.GetWhereUsernameLikeAdoNet("@");
+                await _restClient.DeleteUserDapper(Guid.Parse("623F22F4-17D5-48A2-9E68-63D620E3D809"));
             }
         }
     }
