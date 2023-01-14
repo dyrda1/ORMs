@@ -1,0 +1,2294 @@
+{
+	"info": {
+		"_postman_id": "8582faa8-f3af-4619-b10e-29873604444d",
+		"name": "Social Network API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20224086-8582faa8-f3af-4619-b10e-29873604444d"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "Identity",
+					"item": [
+						{
+							"name": "Emails",
+							"item": [
+								{
+									"name": "Create a email 'confirm email'",
+									"id": "256b6270-af1b-48ab-9ad7-569c39d94430",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/emails/:email/confirm-email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"emails",
+												":email",
+												"confirm-email"
+											],
+											"variable": [
+												{
+													"key": "email",
+													"value": "{{email}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "5502b8f4-89f4-4dbd-b1da-ddf5b2a16def",
+											"name": "Create a email 'confirm email'",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/emails/:email/confirm-email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"emails",
+														":email",
+														"confirm-email"
+													],
+													"variable": [
+														{
+															"key": "email",
+															"value": "dyrda.illia.clg@chnu.edu.ua"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Create a email 'change email'",
+									"id": "8053b2a7-5c2d-4586-ac29-0b14a8aac13f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/emails/:email/change-email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"emails",
+												":email",
+												"change-email"
+											],
+											"variable": [
+												{
+													"key": "email",
+													"value": "{{email}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8b74f976-640c-4311-b5c1-5d1b6f2014e7",
+											"name": "Create a email 'change email'",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3Wpu6w4CsZLecn9UxQv5TNxqZ1yOZH1XyX0UX8Csx15M9un5QU2QCVU8vpFaKH4x5a_hxbiLOLoAtf-9y6MHJO1J7Xz-eXN1Zb__SlZn_iWbmDpwX5A_9GFMv4cm2WVgkyC4XrYf3D-wwVSfD8tcidlZ3pii7z9N3bLs2ghrEoV8Qrf0g0Y9vL3TVOToA_B2td5P3dDsKA0ylDCi1xrwbVHmn1nIFynSByLoUDajpkucpBzJq3TrygeCMR6jOhZ3JR9PECnN6W5lBFEWFXg--pbHa9ail1lMXKR8j_sT1jEUL7GP0adM8tAV3_7jOgXjzR_T86XyDUmoufsPUt4k3uC7EBVjjkadT-3K9MLWatt8At4vIu0oFXb6ybS9OGxvv0lzu5OUYGvi29oWt8JIifLLr1gxxCia9Bl2nxVxOp9P_PAqJUrAWwgTmn_NafEii-0yDS3XM4C868os_NETx8lJLgqBk-IGjtvcmppCTmE6pHeO8kf_m4K5pdj_xND-ic-nfaxNOzq70RN_dgFndEVW-SOcveqh9kIO5YCkIU8PAc0PQug2ucEMr7_3rn93eG_C1DOHurZyJWvXdCPVgCXrk090yCVw9KBoowRw71vKU8Xs0Gc7Epyam7a3fO9tzx53eX2k4GDufJMNZ4fVQW3hzMFeyRj9W3IHed9KhKXWjFjRMAilErZ1bMVaFB7btZVhD5A0NmtbyWwn6gLr7lJ4-ZhPLFVG99DiYASyp1OWbA",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/emails/:email/change-email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"emails",
+														":email",
+														"change-email"
+													],
+													"variable": [
+														{
+															"key": "email",
+															"value": "idyrda7@gmail.com"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Create a email 'forgot password'",
+									"id": "f3b3afca-21cd-4702-90dc-1fd2570c163b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
+										"followRedirects": false
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/emails/:email/forgot-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"emails",
+												":email",
+												"forgot-password"
+											],
+											"variable": [
+												{
+													"key": "email",
+													"value": "{{email}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "08d942cc-16f1-41db-92f5-ef6284dcb7ed",
+											"name": "Create a email 'forgot password'",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/emails/:email/forgot-password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"emails",
+														":email",
+														"forgot-password"
+													],
+													"variable": [
+														{
+															"key": "email",
+															"value": "idyrda7@gmail.com"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "35aa31ed-1475-4913-8eb3-f46849e48030"
+						},
+						{
+							"name": "Logins",
+							"item": [
+								{
+									"name": "Get a login",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6181a204-d80f-44ae-9778-f535b23c8a0c",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "dc3f1bfc-713d-4ad2-8d22-94d22b2ab343",
+												"exec": [
+													"pm.variables.set(\"provider\", \"google\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "7656175f-4f67-4b46-be6f-9af616e9e0fb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
+										"followRedirects": false
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/logins/:provider",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"logins",
+												":provider"
+											],
+											"variable": [
+												{
+													"key": "provider",
+													"value": "{{provider}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "9f013fb8-2065-4e94-828c-29d03491d874",
+											"name": "Redirect response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/logins/:provider",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"logins",
+														":provider"
+													],
+													"variable": [
+														{
+															"key": "provider",
+															"value": "google"
+														}
+													]
+												}
+											},
+											"status": "Found",
+											"code": 302,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Location",
+													"value": "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=86200949097-0icms356lqiqdbmsl9k4fnjtfetfgc7o.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Flocalhost%3A57646%2Fsignin-google&scope=openid%20profile%20email&access_type=offline&state=CfDJ8GUESl9JdatJpWA81zu3TwMwHr1F6ZAtJZgLVX-bgVGq-Ts09qEcHZGY7ieV-Wdkhd8AXmtKKbAhfY8e0IDERm4l0FkU1mAWq1kxZq6SC6MMe3Zc-TD57qH3GVPc6GoGGI2Ik3rEmvS8d89_kUzi2aUFnBGhnnUrKb828h-OYMmm7u8M6cpeRdZZzKq-RBO1WSXBndHiCvTMI850Dnw30rqHMROqd6gNsONx1ai1udRVk3Lz6A8htpyvPmcH9qjp0Dafhj2XiYeXDnGOOWuCH_A",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Create a login",
+									"id": "3180c992-e3d0-4eaf-9a80-c7047a92e6cf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/logins",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"logins"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "327fc313-8955-412f-a442-31a22d2d1dcf",
+											"name": "Create a login",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "Identity.External=CfDJ8K57chHU4gFFifUn3iwf3WrI6QJ6nwpjrJ-IhArszurHrTH9pHZMD1ngryKmHAq9FDkFgfDFmzHK9Z2lx4OvUR0nRJQUJSRSaCjoFmFE2U6XGkGGVLCa8kb-EKpUz2qRFOiTEMkt-aSLQWJI7l87rwbQhwoFnzO8jNTyCl3SNA3RX3cxD_qRJxO04Ucpcu_mI0FSeJKqwoKNnkluJEyJWi4FKBnGkRj4vylKpIquI3aytOqqaUwED1ZGrM53_XLUC-dX9au-c3a84RO068mMxKhQY0TiKcJ9vbuBexa1APRj8cd81hjprFi93Ob3kqH1Y82Vx4y7Zv0H84A67SkFpJ6VdIs4Q4dg_Dx7S58f3nSBxGDEaRNTMlA-uUeSYZmnOh0gzJoKl_yekwqkotRvOV3n0L-R1_-Xu_sfnW1sBz03Xh9tWeXnm8kmmRG9g9rpUp6rY6e8dm-BYTQONzjnI5o22KgOiQkSfPb-Inds09X6tb55JbLsgohGwngT8HNzlRuadcj4fv5ebY3rxJ-4GS8OJj4OwZovjTDWvFF88ffTeXaja-WnzBzWPqWv_C2gRwQ9pyN71U4aYVt6rdtyDzNe74XXu4ZlhzP3_Gyrr0ss8YwQPKa8SY3cxD_U4HDy2CdpiDE9CTUsvj6XElh8TzoYeRHvdOzRlPReHb5jIu-Qbep_tMNYheMGBjrHpXgNnwctXq6uElxmaTB7sYW9dWEpA76MUyHMC6x_9FR073SKW3Ld3LQ3UV3xUyDgyADQf14gWjCfkKPrQext4xTotsk2wiqx3W1O8VuamfpLxMfWE_TxGMgDkv00afKMs0bKNBwakvDOyB3LyDEu_7h2upDh2iBxXwKwBaH3gzLdUPuker86RtvtltLuHz6HaDUXX_xx3_k6RvC7hybGREX2EZDh_K4Ok_oPMUDzG6PIiTOYKWrm_qN9f18FxZfPBA_CDX5Hk-MdBeR48Ep7KdlO1qNmYsAEVI0cJ9N0xMqVuKc8n1iI720kGH45Xd39dYKsA1YcRBW2MADqYQIe9GkG3IxkuPITdXwCQsz-oJktbLYDmZSrf_NAzmqQyjUn-VicsAAMm0c0GTwRvPzIrj635nV08PWQ0VdpWRJ_j1kRxQmx0EdJIMu1XLqk2-1E8t_QstRT7BcT81uuWfT0Rd0u66gG9O1jg1z_c2TL1dk_dvnUoCPQPdkFnTtdqVVffU27iR0yfadwfaFLzisDlBDvPgdiHEHOe7qMSyC2AWqxtnDBb2bGuT9gLNXOdI7H42dGWbgCVbsueUGIPtG04Pwn12aoSWh7sIJEPsmnWhcwkk1ZprqbeFtC3-yGZC8jFCiwGEiZR9YwdHhnF39hMB2Hs4MPb9T2mmMT6nj3FM350nFoBf7On5znYNG7-OOpTgBYCBpgfAbW1Y-Xy9v3tQVMEIgYYgzyNqCQOI8oK-lWVOQyhy9Wp97a9LghYpxGYpwQ9Xyhcan6PI9P4YTyEggj_rm-KTJf9s0-IkFgg0oB7WYhr8HIQ6r-R0VajJMYfUgvPA; SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3Wo5bq3GtFnHfnqq_1gnBPf9npt0EWfhoV5EBPCn34pZMSSSGsQ3DKMXIBZdSyqZURCc_8iMZrJnkYgm6YRHc8MrUGmTjrU48WmqeHQH5ZgJzn9_zVyqsMUaGVZPsTBLTPbVN7MuCqj6GuhekMJZDoOm9SfwzYvH29Zmrgaiba3MOY9ZIc0rEDnll7zS0IKJCMbhuj9KB5WjY5FJjGA8PGnyrUORVMkp62_CYXzK7tRnmGTKf9W9xDJqoxNnqGZnEWuJ6vjRHhVsG5JXqbLiqJNLSg2k4BkcWnMiB0pveGE0yNiKmZl_9oFuQYeBup9mew4KD_jLzk2zbUU3c4S4k6sjJf3Ee60UDPij-RfEA9ZwD3iqaS5IpqjdQQLmuEDxvlAOj9OA9XN4D7zWJTa9A6eB60W5bcSpaJbLK61X_-QQLJM5Gz5M-S62fRLSckg589oUTW8qvrGKkXQ0FDhThNHYQkg7-6Zu1FIftfiPZDU4AzC6msIjjEw7-hIsZ-kAblIDTbXmcPtQFohX05IpPSUWK7W0-cDKWVYLD892Azb2izsmUnSkBMdw3RU62GKOXae5OxjnWem3D3SA-pRcPZDygLmZ5opR_6Ig3RmNAsZylkBp3Jj1djuyBBUhwws66puR238GXKu10bVJX8GKh6rJ12232HlhdxLxVq19I9s_UEbb12XaaY5W_ZDl02mmyoKL5bAWgM8dBbQHbHTA3dTVuj7uprvteGGRdivMSpfNeg",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/logins",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"logins"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Delete a login",
+									"id": "f7501e1e-723f-485e-a974-37695c02fba0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/logins/:provider/:providerKey",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"logins",
+												":provider",
+												":providerKey"
+											],
+											"variable": [
+												{
+													"key": "provider",
+													"value": "{{provider}}"
+												},
+												{
+													"key": "providerKey",
+													"value": "{{providerKey}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "d2c6ec7b-704a-4597-bf2c-88c3e9a81e17",
+											"name": "Delete a login",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqB4u6eNOiVwPnYubLkVJ11duRSHiHn9FrsAOdd6uoIaSJrn9prkOKxQZ2IuUcR1zdux6aj0N8H1Lh4nmIoP0llc5fSxcdMNgstyGr3dgsHYkUXPql4ouC62oldrpNW9Mq4AHrOSfvxKGHG7VOIbCczVVxuWKgunQNJifY0Lo3WIDw8_0-yJdVaBY3p1OmIP4xlbf78mLd5JoyhZLzEm3HF_Onpei-eumaY93W5XXmMi8EvLTu_vslrSiVVKhl6ZdCWRe5mx_6rIRKm_swAuDVNXSa3GKUuDu4R5vnknfccaQ1gPriq2PA5f5I4Rn0jYaBiIX3GjV528dIeqRKIBJymuV-C2LcI3sbLRqpFxqSYHBgNcxyLOBlusMZ6ypZygKdMhKF5Zkeo-0gcLfy4m9iS_oFOSctsJi1_SD3I4_SjL0Ib4TT_IuybCr4lNv7EiRGERrYwgsuArKhGgsn3GJCFOQ37DTseZsJ38YZ_oMnVuQa7hf3Zwo1CYqwLSu4dbg0S8klvr4onja--yuTJHaY1W12f9dFCUhSkwyPPPnD022YabHVKMpjXz63mlSbniRIX_inOyHOsZ66EL0BrxaFdTyVeK9ETTnJpTzUIFo60R-NEGeZY1Li4q-VJLDjowzlxkwqU26-mHYnBdNBwNtBTF3433phu9m2uB9wh-cQ6IkNMwylkIP_Q9SZsHJgxirAuEMtkYb12lfQ_9Vc2-dKBIpZ0MZotNkEA2ESBnonYdA",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/logins/:provider/:providerKey",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"logins",
+														":provider",
+														":providerKey"
+													],
+													"variable": [
+														{
+															"key": "provider",
+															"value": "google"
+														},
+														{
+															"key": "providerKey",
+															"value": "107965381345763398178"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "9d74ef70-b2bd-4c1a-a710-f5b0b62cac11"
+						},
+						{
+							"name": "Tokens",
+							"item": [
+								{
+									"name": "Get 2FA authenticator token",
+									"id": "1da7964c-d303-4c3c-97a6-1b0694b02fca",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"tokens",
+												"2fa",
+												"authenticator"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "190fe35c-a9bc-47fc-942c-c5622ce0024b",
+											"name": "Get 2FA authenticator token",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqgIsitustmsXK4hlay9rXTor39vXcGnlzVr3Hl9wOxYJ-sgRMLSOZzHP2766ZkYpzMEi9QDvpL4KNN86bVlSi68drG-Th2L3Rs0ltqNpO3KUlyCF9U7ENrAXwkLEaChPlkhaX-XpYvI5mACgR5vq_Scs5g5lYxIoYoyuFMXbUDoNSWMWlLFJEQcCa-bYCrAT3_8jAcrrcJ3xgEDLv_h6QpfuF-e9l_1UvORxbn72vuwmY2J0_zdrSbsQca0_dgCazf0W4Krs9TakKURi9eJ4YuJB30Xe0xbx9CeD2ZpIK3R6CqWvFn4HEgT3Hv6bfwDcXCI1Ii-mrIG7HvFsyUEG0_3xNBFfRGJV5VkTRI_csAfSoZjQYjd4cwBWDXuDqcw08TJckw06yxeHCpR0voqBz-ym4NcGMobndJdQd1_eUbvYX_QgiVvUA0cMfco7ahK1PqvUeImh2niCn73mw_RvlOvnFR0h49QrbS1dgWmjVhjFu6heixFOwUhK6JXDmIQrrq_CTQdGLOXcjiKPT-T42QCS5bNQFYgk6rZX9JesL6rFR4gOirpXcEVdeUxSOrvKWl71me2TWeZC-8V8Vvo_-RAPgdAXYL_t8ZR9HlZoGyAXqHqwrm8j6580W7ai-0zgGMRwWUrRBh3qfaE9SY0UP6xlMluIQbVXdkFosSd2FJ9xjZz21_nEwZJuKmcdEmUgWoLmmyB-NosOMzlKdrSzfyYhBFfNXC12Gqw3vMvG7tqw",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"tokens",
+														"2fa",
+														"authenticator"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"key\": \"GJWOATCGFK3SBLFPSOFVSGJGUZBUJX6N\",\n    \"qrCodeUri\": \"otpauth://totp/Social%20Network:dyrda1004@gmail.com?secret=GJWOATCGFK3SBLFPSOFVSGJGUZBUJX6N&issuer=Social%20Network&digits=6\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create 2FA authenticator token",
+									"id": "8bfefa69-458f-4e11-acb6-8d9adf815c88",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\":\"{{authenticatorCode}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"tokens",
+												"2fa",
+												"authenticator"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "5bdae808-34c8-43f3-95ea-29723894a9f5",
+											"name": "Create 2FA authenticator token",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqgIsitustmsXK4hlay9rXTor39vXcGnlzVr3Hl9wOxYJ-sgRMLSOZzHP2766ZkYpzMEi9QDvpL4KNN86bVlSi68drG-Th2L3Rs0ltqNpO3KUlyCF9U7ENrAXwkLEaChPlkhaX-XpYvI5mACgR5vq_Scs5g5lYxIoYoyuFMXbUDoNSWMWlLFJEQcCa-bYCrAT3_8jAcrrcJ3xgEDLv_h6QpfuF-e9l_1UvORxbn72vuwmY2J0_zdrSbsQca0_dgCazf0W4Krs9TakKURi9eJ4YuJB30Xe0xbx9CeD2ZpIK3R6CqWvFn4HEgT3Hv6bfwDcXCI1Ii-mrIG7HvFsyUEG0_3xNBFfRGJV5VkTRI_csAfSoZjQYjd4cwBWDXuDqcw08TJckw06yxeHCpR0voqBz-ym4NcGMobndJdQd1_eUbvYX_QgiVvUA0cMfco7ahK1PqvUeImh2niCn73mw_RvlOvnFR0h49QrbS1dgWmjVhjFu6heixFOwUhK6JXDmIQrrq_CTQdGLOXcjiKPT-T42QCS5bNQFYgk6rZX9JesL6rFR4gOirpXcEVdeUxSOrvKWl71me2TWeZC-8V8Vvo_-RAPgdAXYL_t8ZR9HlZoGyAXqHqwrm8j6580W7ai-0zgGMRwWUrRBh3qfaE9SY0UP6xlMluIQbVXdkFosSd2FJ9xjZz21_nEwZJuKmcdEmUgWoLmmyB-NosOMzlKdrSzfyYhBFfNXC12Gqw3vMvG7tqw",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"code\":\"908570\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"tokens",
+														"2fa",
+														"authenticator"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\r\n    \"recoveryCodes\": [\r\n        \"128a8143\",\r\n        \"a0ea9421\",\r\n        \"2eec5da4\",\r\n        \"88dd7e20\",\r\n        \"76d56fad\",\r\n        \"40d43b90\",\r\n        \"dcd7bace\",\r\n        \"1bfb832c\",\r\n        \"543d7617\",\r\n        \"92d8b9d9\"\r\n    ]\r\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete 2FA authenticator token",
+									"id": "b3fb27e2-96dc-45fb-ab7f-95fda4e1656a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"tokens",
+												"2fa",
+												"authenticator"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "2e905414-79a4-47cc-b4d2-e305049b3981",
+											"name": "Delete 2FA authenticator token",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WoNd2ORMyimuEXY3Z9oEy3LMN3mLXH-qiEfqQgi7HJyFWbBhPYO-LTZIgDmOIfciAm5hPgxHUa0cGc6Be-j4XaVwLwHl5ToGSw71b9kvkqMlK3UWwWZVXimtP1R25BHZeYdyUoieg3xRTmkIj4-NIG92_LbF77VTVtehsg9BrM0wbieeV-HeFt0zjeMUDflqvw1gWDTHcgaqLZRr2vpzd5PyKe3YF3FTIr700GU_qzHupKAJOvZijWz53Ww6bvd17MYlnDKVKgNbUvQp2CKJQ4tIt89zMMFxAneKUydmbl2ijIQNQEdzxTaimCVFMMrK9FCSG34DbbACCZ3nTgjWZDZ0R3np94j62g4M_zSH3BwsAoPzEPMvGHMRR2JYBRDtV7YllNIIFUXZxcmdZXd2z2Sv_gO1npAZl3iMmXH9RPyqyNLkH6ozsB5CMn7Xss5Wj7lU607HDhFNKYhO-QDCA7FyqwvMVrMgs6Z-ignnnojdm6OgG6RwZcVig8oWggmmUqTAEzOX2Uf8WoBtB-LgsbKHazg6_pQz0-FZYET0TWQtHdG4V5CpuA7QFeJrCrh86vi5tdP70nd3EaKQMgwCdMya7xHy_zk6PxOCd-TnyMYcrZYh467ghd4G_yqz5UmhkcyPbKhWOqUgBFir_tpCLCQBpqcAl0yftW_avbTNmcCmt2rSzeqQeBo-ElJ0Ij_ZyapoPRRuNT1O5BT-Ha5LZVJftVIh7jlhwujuAhpZkIBaw",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/authenticator",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"tokens",
+														"2fa",
+														"authenticator"
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Get 2FA recovery codes",
+									"id": "27f6e5e1-08b4-4297-84b8-48a7234cb433",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/recovery-codes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"tokens",
+												"2fa",
+												"recovery-codes"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "681f3cc2-1dbe-48f9-9025-637b35587817",
+											"name": "Get 2FA recovery codes",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrE2IOUNulEw211hmcViCda3JWMdxaowcHiS9zDzp0tjBxWD-E0g_2EWtOM6kmz8c2gMnqC7fs2XEQZQO8XaQobgayGZGmbQ_jNzgE8ak_b0sozmEkKf1y8ukjqw_7bOn0rlEnO0PVpamjFsMqUM1VAulaN7hsV-C-qrOUMIYJjkkSBTlzjwt172-0SIwwavLCh0bQcjJz0Zs8C_ql3jBWdt7WHh4R4CaOWkuHaQP9ip_gFgQDlEiG7uOarK6QUs0yiNnJS_golxJhqCH2XTcPBRozBiVMh382DQwaloHqDNAtSN6aI39p7dK0zzxQwmnBx1RZneR6T9OiPtzh-S74tgfSJ7iQrGSSq5FwB2FayKqNK0Z2gyv0CcaZnv_1oFl1j-7EZQbxc1X4_ffApHcFRhX0dQDxYat0kqimVutVClAE20W_iHKDxqT3rQecVoEqLNd1SJ6PPbz1Mz5M_8qeLaOx0WoMLE5U9UexCdi3YQ5I-aPA3tu3zfMT6nyPqdAqYNfgRjyqQjb7B1O4szSjEZMEsqg1fgPjBOnQr5T6ZzO2OPqqcw6zmbLnOSsXBYEVmyY0NEyBSXYRh4ejzBVeQ3hyioLkS1J499whi_eu8m0r4JOvAeEbOWK68ZvbaJCcuYkXIJ4Cmb3rD9_vgoBfjrvSNhNF6e9rC5I1rI2spfmiHDHAIlS44B2RRUFmgNDkMhD1jEWKWJYESExicQJ3sHsVu5KKG0A0iZkz3TBlKCw",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/tokens/2fa/recovery-codes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"tokens",
+														"2fa",
+														"recovery-codes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\r\n    \"codes\": [\r\n        \"28135225\",\r\n        \"a6a301dc\",\r\n        \"c24454b3\",\r\n        \"fd0d6566\",\r\n        \"22a0b796\",\r\n        \"8225ff19\",\r\n        \"2fed3588\",\r\n        \"12c78d26\",\r\n        \"52b45f7a\",\r\n        \"f90d8bf6\"\r\n    ]\r\n}"
+										}
+									]
+								}
+							],
+							"id": "8a560a77-35dd-4b25-9f8a-0c5dd0abf1ef"
+						},
+						{
+							"name": "Sessions",
+							"item": [
+								{
+									"name": "Create a session",
+									"id": "f6ceab01-0586-489d-a5e1-054348283286",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"{{email}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"remember\": {{remember}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "5d50f9f0-3471-41d0-b643-06de7cfbf391",
+											"name": "Create a session",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"username\": \"dyrda1004@gmail.com\",\r\n    \"password\": \"Aaa12345$\",\r\n    \"remember\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												},
+												{
+													"key": "Set-Cookie",
+													"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WpUMWfzArBBCYiKtmqTzyqrFF-LpKwFSkxFkTT5SxyjowDaF-dR5NwSYD9mw5p22NXneO5Uf7yT1KdOaerWBYZudnXUZ-MfRVwQriv1r5R7aMWtx0lKN4-SO6_lg47kMXzWT4_zBPd06aYTehU1okeyH1lP0lgSDjpC1eNljX8oX2YePU-_osn4-V37OrEjzb71mr9LGG8lXrjNyd-XYU1HjZJ2LRhl10jwtzHFoWQ3G6IBOK6CxnBaeWaRXDallj_sM9DJGVoXVpXw7mCUnFl2VI5eao8HeM7iT8UzZu1eL7BBeZumzCa21XPFkOwx6WlMxsFfeIDqUHfVj8zURC8drtkfEmF69aMKdVnClHVlmEMbRg4b05Ui34WzyambllmjhvQSoKQWxQr9H2ioH8NfC9AiXp_bpoKYbk8O3gt0vShneU2ieWjl3r2uFGoNr_Oq8ks-hWGRVWxrEEuGqoogeJOWzNgWaqzOxg_TANg6Ihi69wo3VU3odCVDQPEveZ-tfWODsPQ2SZI2wGWKsD-__7J2my03dMyUFa8cKSOrSy8tHmKIRj7X-aq0RedemcpWV2411ALlRF_kc3fSE0lSYvyRTKMrXbdvqDkOjikYZd4kIf6WknTRKYCMNt1YqVBNblswKD2E6p4ERAAFQSpEiyw7fj42PfT2QtnVJI8gwdpZk7sdd5_X6vn8Iva808QX2oDO_rM08JFNCz-DuACoB8yiSkmgG7RK9nwi2Y_kfA; expires=Sun, 27 Nov 2022 16:22:49 GMT; max-age=2592000; domain=localhost; path=/; secure; samesite=strict; httponly",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"requiresTwoFactor\": false\n}"
+										},
+										{
+											"id": "ab505775-7835-44ee-a84b-4d5388c46699",
+											"name": "Create a session",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"username\": \"dyrda1004@gmail.com\",\r\n    \"password\": \"Aaa12345$\",\r\n    \"remember\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Set-Cookie",
+													"value": "Identity.TwoFactorUserId=CfDJ8K57chHU4gFFifUn3iwf3Wq7eR6xWOO6xP4DjNGhfTVU7c919gyAkWKnR6S4zb1A0F5fzRFyMuQAPcd4lo3KIpvFVuTKPzwwOvavfYI0KtOASuGCk8DCwqTdisF1OQQR6i_CHqVgApsx4CbGG9_ylqre_MFLDe6OpxWHeaYvgq50dPwpAJFsHFe_wAg5LjegmxXPt73Tf76515tZBMeIA7RkJOjLNBPdIDQiXJNbb2GtHODtPY5TLESloKrnBkCCYvX0DgJheDoUPDf1fUhP011JA0jLGzZm9SCL1bDqea9ZcXVxwjYae6pt12NwBN22GJv45NrwwQYvmqLc931y5zALJhunpFdahtK208YoYNtLPx4BfF45JhQB6Hv08Yud4g; path=/; secure; samesite=lax; httponly",
+													"description": "",
+													"type": "text"
+												},
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\r\n    \"requiresTwoFactor\": true\r\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete a session",
+									"id": "438b913a-d5bb-4a62-8f3e-fd6dccc3c520",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "994a335c-8123-4986-a378-e1f926e30ca0",
+											"name": "Delete a session",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WpUMWfzArBBCYiKtmqTzyqrFF-LpKwFSkxFkTT5SxyjowDaF-dR5NwSYD9mw5p22NXneO5Uf7yT1KdOaerWBYZudnXUZ-MfRVwQriv1r5R7aMWtx0lKN4-SO6_lg47kMXzWT4_zBPd06aYTehU1okeyH1lP0lgSDjpC1eNljX8oX2YePU-_osn4-V37OrEjzb71mr9LGG8lXrjNyd-XYU1HjZJ2LRhl10jwtzHFoWQ3G6IBOK6CxnBaeWaRXDallj_sM9DJGVoXVpXw7mCUnFl2VI5eao8HeM7iT8UzZu1eL7BBeZumzCa21XPFkOwx6WlMxsFfeIDqUHfVj8zURC8drtkfEmF69aMKdVnClHVlmEMbRg4b05Ui34WzyambllmjhvQSoKQWxQr9H2ioH8NfC9AiXp_bpoKYbk8O3gt0vShneU2ieWjl3r2uFGoNr_Oq8ks-hWGRVWxrEEuGqoogeJOWzNgWaqzOxg_TANg6Ihi69wo3VU3odCVDQPEveZ-tfWODsPQ2SZI2wGWKsD-__7J2my03dMyUFa8cKSOrSy8tHmKIRj7X-aq0RedemcpWV2411ALlRF_kc3fSE0lSYvyRTKMrXbdvqDkOjikYZd4kIf6WknTRKYCMNt1YqVBNblswKD2E6p4ERAAFQSpEiyw7fj42PfT2QtnVJI8gwdpZk7sdd5_X6vn8Iva808QX2oDO_rM08JFNCz-DuACoB8yiSkmgG7RK9nwi2Y_kfA",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions"
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Create a session with login",
+									"id": "f955e0ce-da34-48ba-8229-7a704fcb5ff5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions/logins",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions",
+												"logins"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "183a1738-9a1f-456f-9d71-f960eb18ad28",
+											"name": "Create a session with login",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "Identity.External=CfDJ8K57chHU4gFFifUn3iwf3Wo4rKVhnQLbo7AoDDzWVyJ47a89ODAAJJdjK0y4kECcfrnI0EjAl1FLtPbnGXWfJlwuRD-0Sk6lzny2bke2RYO9iVLKFMAfobhtpretxJbsX4ySTRb21rTbj5Pna2v0UZgw1BRP8RbtOW8hJ99cBBvdTickXBrDBNRZl3Hvuml1kYu-Wi_ZZ0E-ZJBYgBJhAx15XdqckTB-F98Qdf1ccvlTaFY2_AfBMjq6cQfVYE1j793damhAD5NPHXRntH1ICZoWR1OHttBg2IP4KVmDC0e4GpuBejzjki2BrggU5hYddEw2QcGKEXtqaBuYe3B_IMWOBsmkffNQLSiQich8pTk9AsXskdIKnwqdaHq2jEce9zD5hz9DE-dbIxRPRo9Q8cWAZU85z1HDrhOTPoKxV3DSqkfaEHjb1S9pwvxBwU21MpTkOAI6OoIxe9pqtvFcSN1sp_Lv07GDAKz1OesbvOMp_bBccfr0lZA8RUYz28dksSClf-4WT1bnCfBJafCvCQfcruZuoX6SXDCUbrWivHO8nmLkubaXMxwKdzb713maPvRMOPj4Vjhzipa_uEQ4D4LdWyuzx89C7JKfGGUAgwtrIgch0RSH6a-cOgDR-Sx7elD3Sa7Unk3EZeFthXmvUWqwUrpc-tUgNY8NilVySZsF5Z0LL_Vg1RCvXaA9Q9uoNWXP6U8u7d_AdFDAcd9skAeZw5JKwjrg1nstpLH4wxaGqFwGTBmN2wLuItlVqrwDAwb1Jdn0eJrjI_sq2sRo3G7AhySuZpStn1xgbTsJNTdw-XBFubde5FulS8eMZKxYYkr0aaXDGnwqqE4QBkQL6yModeQ2IDjxEB5wUZfKeC4zclE6ZpRx7xrbPpmhUoaH2G9apxukwdI5_xExYPmPnltkzyW22l5aQAXx18-Ka0l11uCFKJqpnjpsC9-C-KKTXVSlrpjRMT81mKCSoN_wwTMdx1xWErLHiNsSZSPDRkCnE6DRRNP-S9AYevK9kpHXsSdk7rmmjxrQC9JDBTua4izoKJ7LabfThQO9zz1X--BW0Rtbi8HxcTEj6ybqjjLpK00MCH-H2AWthUssI1LTucZiyWNhF3Li5GpQ3vpPC6ez61PraUrqms-BCtFDFAQZ0SvU6t0jJq3VkhkZiDFBpHY6MM_W-hNlOEvMi21zTWEEr5PuBtSglICPF6v5UynrGIPY4tGPrPrhtOYjEgZR6eqrnJWwGH4s-w7CgMD-7q4rIQyj7Fc7zeH9JIJFxwIQjgwG8ZdzShC1qDdhkw6h7jPewByE5c8tQr9FQEX0N6X7xR-eLE7JZusXaNU-3Cy4pObcE7wx78xAFcz19ZLrjvZ0i1kazIy-pL5a53fYGFs7L3EH82XfRNyD0sHmZmeGp_59NSLj5Hujh1JBiabsMm3HwNTp3uBfxpIXV6NnJJqH6MV6XolpibiKhaf_nbq9V5l4uYHxx7pS2UvMetUHGwhyiDiSbfNxBCxVXsjPpyfElN0K1M86K9SSQIuM8j2GFQ",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions/logins",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions",
+														"logins"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\r\n    \"notRegistered\": true\r\n}"
+										},
+										{
+											"id": "ffd7d878-b9da-437c-8f04-aeb3c60208a9",
+											"name": "Create a session with login",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqmimXfEKOkBIqiHcC3BB-d35lGYMVUgrzXC1IPoAw9itPYcB0B8KK61Lez0PxNk4xHWd3OAlzysmKpn201qVOkf7AGg9cCBqbTV47HeReqyZd5H2lrjNZ-mFc1F9Rb2VrcPfCdHJ1b72UskhAfUJOwlNX2tmfd06djQzey6MyFKtZLkrIxGq-fxt_miKhIHP5z55ydDeZtQXGTLFxFJQ3BG4y9VlSo9KEazcHwKc-er3Eh9bmTtm7gs8_bYbu1Tt8iiQkMtjRB-qg3gB_BOO6eHDmlR_QYHriKgtusKMTH3da8_A-A-FJEqteF_1lRpF0XU4evWmJ9XG_0FNdQVHG7hsxjIYuzY7a4rzL5qU1KLWwXfoicjX9FWjj_ctM6VHnreSuOoZV-a1YdgJcirb3UpaN8Pe-nmRIvBEM_ZOUghSd0Q8md4c30TRVLg7F4XZzr2jrieBVIH-ZdJ78ZFspV1rU5edJDMmX9FF8Btbz-EGFhZxMYio1Zyzl-dT7d4fycRmkSns3qdYkPZKBtT6N_yuVuFkJisuc9T1F3q8j-qQw6ls4rFF4Apjqb7RRSkzr01NXhSM3TzklbTy0dBEqKMZr7fmdJLOMUgVlwnIraalmyRvvYhYrwcgHVBv-CRDuuGiKJhY3X5wE-dhKrg3jwxFV8EKSJpmEnbFgRm1cf1Ifv1P1APS3Pobj6zGH_PHNnnSsYhKJBchTHADna54vSXcd38Ly52Ct7C4Kg04-ItE8zVvDgi1Y8TXcHG-2QM3fLLncT5Jk5uG9-nv7gASy2lQcQlkE8aO3cfOcaV4zwLlZI3SVdm4BO_bVXWXKGU8t5Hgh4y3dGaIYb2oIZ0tZZ3qLJ9rZM1EtjRvIjFrtjzQ",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions/logins",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions",
+														"logins"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												},
+												{
+													"key": "Set-Cookie",
+													"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqmimXfEKOkBIqiHcC3BB-d35lGYMVUgrzXC1IPoAw9itPYcB0B8KK61Lez0PxNk4xHWd3OAlzysmKpn201qVOkf7AGg9cCBqbTV47HeReqyZd5H2lrjNZ-mFc1F9Rb2VrcPfCdHJ1b72UskhAfUJOwlNX2tmfd06djQzey6MyFKtZLkrIxGq-fxt_miKhIHP5z55ydDeZtQXGTLFxFJQ3BG4y9VlSo9KEazcHwKc-er3Eh9bmTtm7gs8_bYbu1Tt8iiQkMtjRB-qg3gB_BOO6eHDmlR_QYHriKgtusKMTH3da8_A-A-FJEqteF_1lRpF0XU4evWmJ9XG_0FNdQVHG7hsxjIYuzY7a4rzL5qU1KLWwXfoicjX9FWjj_ctM6VHnreSuOoZV-a1YdgJcirb3UpaN8Pe-nmRIvBEM_ZOUghSd0Q8md4c30TRVLg7F4XZzr2jrieBVIH-ZdJ78ZFspV1rU5edJDMmX9FF8Btbz-EGFhZxMYio1Zyzl-dT7d4fycRmkSns3qdYkPZKBtT6N_yuVuFkJisuc9T1F3q8j-qQw6ls4rFF4Apjqb7RRSkzr01NXhSM3TzklbTy0dBEqKMZr7fmdJLOMUgVlwnIraalmyRvvYhYrwcgHVBv-CRDuuGiKJhY3X5wE-dhKrg3jwxFV8EKSJpmEnbFgRm1cf1Ifv1P1APS3Pobj6zGH_PHNnnSsYhKJBchTHADna54vSXcd38Ly52Ct7C4Kg04-ItE8zVvDgi1Y8TXcHG-2QM3fLLncT5Jk5uG9-nv7gASy2lQcQlkE8aO3cfOcaV4zwLlZI3SVdm4BO_bVXWXKGU8t5Hgh4y3dGaIYb2oIZ0tZZ3qLJ9rZM1EtjRvIjFrtjzQ; expires=Sun, 27 Nov 2022 18:03:25 GMT; max-age=2592000; domain=localhost; path=/; secure; samesite=strict; httponly",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"notRegistered\": false\n}"
+										}
+									]
+								},
+								{
+									"name": "Create a session with 2FA authenticator",
+									"id": "490183e0-6cee-4871-8e1d-63f94d183bb0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\": \"{{authenticatorCode}}\",\r\n    \"remember\": {{remember}},\r\n    \"rememberClient\": {{rememberClient}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/authenticator",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions",
+												"2fa",
+												"authenticator"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "c1fe75a0-4b09-4668-a391-e09944bebc18",
+											"name": "Create a session with 2FA authenticator",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "Identity.TwoFactorRememberMe=CfDJ8K57chHU4gFFifUn3iwf3WoD8ttxJVfhi0zISXSXv1XwqvpWpWXRpabiXKpjjugECfJN0NWMeqmcQS3svyRS_Biz5C9uXkgK49K4PyRnTPkIcjKxrKoiMKnCnxift1MpiTBYb78-MukVH23HRfmyqbnpwRafB0jnqNRVJX1DR1tD4ZHN8acLTxffsXuPXkdWPz6vjXucpuKVnoO_rnLYKkqPktAqmstcweWKvJfrUFUmnONFEqgq482EJg96Me_VEAPLpS92KB9QV4aGYngoV5p6kFhDcMdBSg--UDI9Gz666fCkUoTlGyITifz-mxf0whTk0KX2865W39YoTRdmg5_vLepGH-TnzOsZkizhp5x5bVR4ok_laITl0SjkVlNkJT-FXZ2CgbhnYv_oHDJ3hWVkZYVmXiV7G3B0IZYgieNztbVcHQWBmQA1MXi3fYUJtl16HLfLmJshjIPCETqScRPx1FY0sNjkHR1GpWI7DxE-GBN6P4NRX_HpiQjF2pU-9g; SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrAt20LdQB-LOn2uRS6sTws5yGtU2S7qWIFLg8PUQR500fOGQ5G5xQr6ktBKtIg2tUAQ6xqMmiK_LfKQlM7JQMvNNH9O58urGVqsRnxFgJNIlUVgbTzGdfrm86rsrXW_5zPZgUCsYWp7OH7giQTodGxtXeFYCfdMOJlLexksRfaDc5YmZ_5j5GVWhzn8k2gCXCb5q-4Iv4hSmbJlwBb3AbfZ7e6cehltlLBxj26IGEbQyEKL0oiK7M0eHJx_wz2YuR6RDt-ktBq8QzouENvk8D6hAEwktJBHRss6yDNEN48oOZfwbOuXAH1JI1FGXSSd1PUuqyof2Mdbtq6c7rAlzkzo1N9RQ9O2dejvRto0l1zPQsn4115SxuCcUCCXw7Ktp5CRb2wfDgwnmJqbJCiWr5TmLOOCKsA5XyyfmcrIKzNwjWMNwUHsaJkxSpUKfE754wofgLS6iI2LIu7G26j3j_CDpv8U7yIOUepDi8TQDOgFcorkGAWwRYQ25qNnRIahHx1sc8djmFMybE8Fn-ICUysh2jhUHU0O7bOjfUlpYgGW27dQ7nheY7W2HChRmmPZGhydzejZ262Tex6f818N7tGa2rWdaECUyttd_EZGB5JcEmEUe6AYQGklvU6yAleX9oeicE5WMWUp92pFo2wj9gK7TItmOJ-9CNyI8v_Vvydmuy6Wm3SG99UD8gLSd278FZ6V_6akzhM7HRFej5wVh9CB0m-xnf-9Is3Lrawt1yvbw",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"code\": \"479388\",\r\n    \"remember\": true,\r\n    \"rememberClient\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/authenticator",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions",
+														"2fa",
+														"authenticator"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Set-Cookie",
+													"value": "Identity.TwoFactorRememberMe=CfDJ8K57chHU4gFFifUn3iwf3WoD8ttxJVfhi0zISXSXv1XwqvpWpWXRpabiXKpjjugECfJN0NWMeqmcQS3svyRS_Biz5C9uXkgK49K4PyRnTPkIcjKxrKoiMKnCnxift1MpiTBYb78-MukVH23HRfmyqbnpwRafB0jnqNRVJX1DR1tD4ZHN8acLTxffsXuPXkdWPz6vjXucpuKVnoO_rnLYKkqPktAqmstcweWKvJfrUFUmnONFEqgq482EJg96Me_VEAPLpS92KB9QV4aGYngoV5p6kFhDcMdBSg--UDI9Gz666fCkUoTlGyITifz-mxf0whTk0KX2865W39YoTRdmg5_vLepGH-TnzOsZkizhp5x5bVR4ok_laITl0SjkVlNkJT-FXZ2CgbhnYv_oHDJ3hWVkZYVmXiV7G3B0IZYgieNztbVcHQWBmQA1MXi3fYUJtl16HLfLmJshjIPCETqScRPx1FY0sNjkHR1GpWI7DxE-GBN6P4NRX_HpiQjF2pU-9g; expires=Sat, 10 Dec 2022 16:39:45 GMT; path=/; secure; samesite=lax; httponly",
+													"description": "",
+													"type": "text"
+												},
+												{
+													"key": "Set-Cookie",
+													"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrAt20LdQB-LOn2uRS6sTws5yGtU2S7qWIFLg8PUQR500fOGQ5G5xQr6ktBKtIg2tUAQ6xqMmiK_LfKQlM7JQMvNNH9O58urGVqsRnxFgJNIlUVgbTzGdfrm86rsrXW_5zPZgUCsYWp7OH7giQTodGxtXeFYCfdMOJlLexksRfaDc5YmZ_5j5GVWhzn8k2gCXCb5q-4Iv4hSmbJlwBb3AbfZ7e6cehltlLBxj26IGEbQyEKL0oiK7M0eHJx_wz2YuR6RDt-ktBq8QzouENvk8D6hAEwktJBHRss6yDNEN48oOZfwbOuXAH1JI1FGXSSd1PUuqyof2Mdbtq6c7rAlzkzo1N9RQ9O2dejvRto0l1zPQsn4115SxuCcUCCXw7Ktp5CRb2wfDgwnmJqbJCiWr5TmLOOCKsA5XyyfmcrIKzNwjWMNwUHsaJkxSpUKfE754wofgLS6iI2LIu7G26j3j_CDpv8U7yIOUepDi8TQDOgFcorkGAWwRYQ25qNnRIahHx1sc8djmFMybE8Fn-ICUysh2jhUHU0O7bOjfUlpYgGW27dQ7nheY7W2HChRmmPZGhydzejZ262Tex6f818N7tGa2rWdaECUyttd_EZGB5JcEmEUe6AYQGklvU6yAleX9oeicE5WMWUp92pFo2wj9gK7TItmOJ-9CNyI8v_Vvydmuy6Wm3SG99UD8gLSd278FZ6V_6akzhM7HRFej5wVh9CB0m-xnf-9Is3Lrawt1yvbw; expires=Sun, 27 Nov 2022 16:39:45 GMT; max-age=2592000; domain=localhost; path=/; secure; samesite=strict; httponly",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Create a session with 2FA recovery codes",
+									"id": "d9cc97f5-8c7b-4221-aec3-396a05f86188",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"recoveryCode\": \"128a8143\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/recovery-codes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions",
+												"2fa",
+												"recovery-codes"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "6b836d64-38ee-4bd3-8251-b30e98c67270",
+											"name": "Create a session with 2FA recovery codes",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqvCp1ZuD7pY35VOB8QtSi3tVk8Z0En1BnFKKN3WyTGfRmMe-E8SamOalonfL8907mtTcW3w6Ir3UQjpvT1pa_MULy9aQHdz9czhli6pwEKaJ5n7cOfkcyRrZu675P3yy7uBNOKYDVK74IK279XMDvH6kXyYCufEA3eFEHqu5j5226FizYeNbgwg1k37ON-Ss_hC9h7tx6z2sRzJEvcqaT_1viL-Lr_ZZDODpk_IptE3gkFtZiQVORgRVHyXIwhGhBYkbZD7wMamOZtji00fu_DSY4BDLQc3RkdLPf7dl5qcUhrMzswWCFCfp7KS2whet525MQ-4XeJ8Mly3fXAfKrpBygMBi5sOEUq9_lEtUT1oqI2LxpHiXvcpHwnkyNHWkzW5BqTdtG9ed_iRrSCiDVXf9bBtgkWN3q6Wn_nqbrWTplm6sVhsCFu5hWXgNBqfJHrMcsH0nsBMEzQMVxAmoxiF_Bj-OYVbyXMjMhOQ3q2vibCKepT9Cu4ZMeewQQSqpBQhJU3kObIOrZsXZeazgSv_rTyxSClgxaeFCQZUuwnmDrwTzq7ndgT02fjy0_o2zJDkzJKPWOIDUdM4YLUFz1WTWZ4mMHehFbbU8tQFHNtyJpCh0GHILqWTwe1kUT-Xu8gJ4KzCFbQ3RSXnjimqmQK6r4kDzJSZkFmpQuLHGf9Do6gGhQFSMUsd6IyVHQGBmUpMy7EgKMD39D3l5RaGTSRv88xa0i1MTpAeZGq5G7nTw",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"recoveryCode\": \"128a8143\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/recovery-codes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions",
+														"2fa",
+														"recovery-codes"
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Set-Cookie",
+													"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqvCp1ZuD7pY35VOB8QtSi3tVk8Z0En1BnFKKN3WyTGfRmMe-E8SamOalonfL8907mtTcW3w6Ir3UQjpvT1pa_MULy9aQHdz9czhli6pwEKaJ5n7cOfkcyRrZu675P3yy7uBNOKYDVK74IK279XMDvH6kXyYCufEA3eFEHqu5j5226FizYeNbgwg1k37ON-Ss_hC9h7tx6z2sRzJEvcqaT_1viL-Lr_ZZDODpk_IptE3gkFtZiQVORgRVHyXIwhGhBYkbZD7wMamOZtji00fu_DSY4BDLQc3RkdLPf7dl5qcUhrMzswWCFCfp7KS2whet525MQ-4XeJ8Mly3fXAfKrpBygMBi5sOEUq9_lEtUT1oqI2LxpHiXvcpHwnkyNHWkzW5BqTdtG9ed_iRrSCiDVXf9bBtgkWN3q6Wn_nqbrWTplm6sVhsCFu5hWXgNBqfJHrMcsH0nsBMEzQMVxAmoxiF_Bj-OYVbyXMjMhOQ3q2vibCKepT9Cu4ZMeewQQSqpBQhJU3kObIOrZsXZeazgSv_rTyxSClgxaeFCQZUuwnmDrwTzq7ndgT02fjy0_o2zJDkzJKPWOIDUdM4YLUFz1WTWZ4mMHehFbbU8tQFHNtyJpCh0GHILqWTwe1kUT-Xu8gJ4KzCFbQ3RSXnjimqmQK6r4kDzJSZkFmpQuLHGf9Do6gGhQFSMUsd6IyVHQGBmUpMy7EgKMD39D3l5RaGTSRv88xa0i1MTpAeZGq5G7nTw; max-age=2592000; domain=localhost; path=/; secure; samesite=strict; httponly",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Delete a 2FA session for client",
+									"id": "5aa31094-7fa5-4a04-bf7e-a34d17e0868e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/client",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"sessions",
+												"2fa",
+												"client"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "14f88e12-1024-4d14-afd9-ef9c46ce6bc4",
+											"name": "Delete a 2FA session for client",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "Identity.TwoFactorRememberMe=CfDJ8K57chHU4gFFifUn3iwf3WrsrK4RIgVKcB3-OFLisM-rvrjhNJnh0qZC9H9oqsAilNm3ogPsZp5I6I0XEzHi3yE6z6NAPiqoS6e1Msh-3jE96iACVT6gHEHe8j54SRWj86v9OYnHh5YSouGKyYVAU86kiH_s35_2SGP_1He0xywa5qhMJs3Gm7VMUk8ZP8kQ3jH4hZSkKmhcXkjjG7saVv_8kC0yZ77aHr87wdhZZmqwGU0ymPG3r-bhVqQeDzNPtpH6qY4gl37GbxNb141nwW_zwJwMxis7I7oaxZhTAFUFvJ6vXUAg-3WCwSSjdKEwwid8npuh16gJo3uSHJkmG6SEkjQZB9CkgjxjpaiLWEUhOV7pRn3vuTf53K-My3_VCFFujB1lS0PuYRawCS7McjMYFsV-klXjaPxhTT8hgiWFJP5cbXxRSdLXifi1EWWMLBKUcrhKrsw3Qkyu-jEiFBMQdQ2hVUOce0X0LGCmTTbRh6duJ-gL2q9uANV7ZzIcuw; SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WoNd2ORMyimuEXY3Z9oEy3LMN3mLXH-qiEfqQgi7HJyFWbBhPYO-LTZIgDmOIfciAm5hPgxHUa0cGc6Be-j4XaVwLwHl5ToGSw71b9kvkqMlK3UWwWZVXimtP1R25BHZeYdyUoieg3xRTmkIj4-NIG92_LbF77VTVtehsg9BrM0wbieeV-HeFt0zjeMUDflqvw1gWDTHcgaqLZRr2vpzd5PyKe3YF3FTIr700GU_qzHupKAJOvZijWz53Ww6bvd17MYlnDKVKgNbUvQp2CKJQ4tIt89zMMFxAneKUydmbl2ijIQNQEdzxTaimCVFMMrK9FCSG34DbbACCZ3nTgjWZDZ0R3np94j62g4M_zSH3BwsAoPzEPMvGHMRR2JYBRDtV7YllNIIFUXZxcmdZXd2z2Sv_gO1npAZl3iMmXH9RPyqyNLkH6ozsB5CMn7Xss5Wj7lU607HDhFNKYhO-QDCA7FyqwvMVrMgs6Z-ignnnojdm6OgG6RwZcVig8oWggmmUqTAEzOX2Uf8WoBtB-LgsbKHazg6_pQz0-FZYET0TWQtHdG4V5CpuA7QFeJrCrh86vi5tdP70nd3EaKQMgwCdMya7xHy_zk6PxOCd-TnyMYcrZYh467ghd4G_yqz5UmhkcyPbKhWOqUgBFir_tpCLCQBpqcAl0yftW_avbTNmcCmt2rSzeqQeBo-ElJ0Ij_ZyapoPRRuNT1O5BT-Ha5LZVJftVIh7jlhwujuAhpZkIBaw",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/sessions/2fa/client",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"sessions",
+														"2fa",
+														"client"
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "b6701504-a78d-46e1-95c1-a3ee202274b7"
+						},
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "Create a user",
+									"id": "b457155a-e71c-4969-a0ae-fa662ee81f42",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "5a5755ce-d58d-4bd9-8f7f-b9a3dcb2c2d0",
+											"name": "Create a user",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"dyrda1004@gmail.com\",\r\n    \"password\": \"Aaa12345$\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"b552578a-1460-41b1-e33f-08dacfc8ea13\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete a user",
+									"id": "0f95dca7-58f9-4d61-8044-79279bc4d66a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\" : \"{{password}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "bf38af4e-acb9-4633-86db-766bfc615dcb",
+											"name": "Delete a user",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqrjN2YxOTJOqR77xLrx-9VAF8uCiqkTVoyxMEpo1ECR3KeOZYWRxENPDl9azf1eisG1z_lLJjxU_k4ALch1Z8KNGVOVSmhjuxW75iDlIyZdxQQyBXe-Pt70zyJsFClEPDUquzeBceylKcq3US3N8IYGawulhPiyRu9zAKVagCJLLSzMCkSbLlB2IocUR238z7Rwcip_GNJRXGiVMfR-UPGznEjBf2Bc4DiOTkY-7bor8kqJWIOxDOfZnQSjoYSGSkpCZbrKm6Pa8K_1yEvaSZGa0SU1b8ZwmU0kSMaAXwL0Oti1Bbbyw7Ay6E_-gNEsSxJCezaZ2OhSoP9IouTO42zkQk0GiLia1aru733wOk5JetMU9v0S9wAlXfexj49KQrQqOCa9NgTHDPjUwQ4T7sc7t3kJG914i1wuHSL_XIP6am32jFltFatjVm3K60zUU8wTWXSPjuC6XojkruNckc5OtGlIKMApCsvJXcJA9dcblvlYbKQ2ijUGU2vpoV7BG1j2AKVv3V4ivoZidALj809ADNGCuEQBXU6vjo_UFUNjUGSloDlWw7Pmj7CYN53D_m0iQb3n_cXGR6YHpBrpBgSgT3wdhJycHWe4Eo2Ub2jmTCwEVTdSTLTbtS8IxojBy2Egw3N4RPpX0c3koQFbM2PKwaPk9Vjyj9yA85oeHEkdFwcvxvIVhFMbdCbFwT4tQdKy5YjoJWiDwEH_g78kc5weWIf4pDQbijn5TzsVjKkXA",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\" : \"Aaa12345$\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "308df356-3dc9-4c3d-e340-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Get current user",
+									"id": "c380eceb-4078-4ae7-bcbe-a616d04e2b0d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												"me"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "a6dcfe87-eadb-4375-aa89-550af95dad1e",
+											"name": "Get current user",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WqgIsitustmsXK4hlay9rXTor39vXcGnlzVr3Hl9wOxYJ-sgRMLSOZzHP2766ZkYpzMEi9QDvpL4KNN86bVlSi68drG-Th2L3Rs0ltqNpO3KUlyCF9U7ENrAXwkLEaChPlkhaX-XpYvI5mACgR5vq_Scs5g5lYxIoYoyuFMXbUDoNSWMWlLFJEQcCa-bYCrAT3_8jAcrrcJ3xgEDLv_h6QpfuF-e9l_1UvORxbn72vuwmY2J0_zdrSbsQca0_dgCazf0W4Krs9TakKURi9eJ4YuJB30Xe0xbx9CeD2ZpIK3R6CqWvFn4HEgT3Hv6bfwDcXCI1Ii-mrIG7HvFsyUEG0_3xNBFfRGJV5VkTRI_csAfSoZjQYjd4cwBWDXuDqcw08TJckw06yxeHCpR0voqBz-ym4NcGMobndJdQd1_eUbvYX_QgiVvUA0cMfco7ahK1PqvUeImh2niCn73mw_RvlOvnFR0h49QrbS1dgWmjVhjFu6heixFOwUhK6JXDmIQrrq_CTQdGLOXcjiKPT-T42QCS5bNQFYgk6rZX9JesL6rFR4gOirpXcEVdeUxSOrvKWl71me2TWeZC-8V8Vvo_-RAPgdAXYL_t8ZR9HlZoGyAXqHqwrm8j6580W7ai-0zgGMRwWUrRBh3qfaE9SY0UP6xlMluIQbVXdkFosSd2FJ9xjZz21_nEwZJuKmcdEmUgWoLmmyB-NosOMzlKdrSzfyYhBFfNXC12Gqw3vMvG7tqw",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/me",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														"me"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"308df356-3dc9-4c3d-e340-08dacfc8ea13\",\n    \"username\": \"dyrda1004@gmail.com\",\n    \"email\": \"dyrda1004@gmail.com\",\n    \"emailConfirmed\": true,\n    \"hasPassword\": true,\n    \"phoneNumber\": null,\n    \"phoneNumberConfirmed\": false,\n    \"twoFactorEnabled\": false,\n    \"isTwoFactorClientRemembered\": false,\n    \"numberOfRecoveryCodes\": 0,\n    \"logins\": {}\n}"
+										}
+									]
+								},
+								{
+									"name": "Create a user with login",
+									"id": "dd63f7bd-991b-434d-bf62-b391f8b680d8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{email}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/logins",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												"logins"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "fb6edcb6-258b-4f01-a0b3-7947a66508b0",
+											"name": "Create a user with login",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "Identity.External=CfDJ8K57chHU4gFFifUn3iwf3WpnQDcQO1silvBy16tayO6E6xhBdoVCjzIHkhQGK1Fhz1belV9xQDRiivkc8pXh2FSDcP4bUXFdEhAmpCYiKCaG3RVYC9xF2oX8-XFlqj4eFoUV54Tep3l3Cmnjs1wtD-yzVttpz6c1oj-I_5M7L2-88PMQpdsndNK3E-mVcAkjKYEzE6_et-wOyQ7LuoHn_5ReLNXUhRmVAf7lEUGVEehucxGqmrCCbzkydWOVeg2nxviI8GVKkYZtrbw1WQ4c06Fcafs2TGVx7Fd6Y8ScZf5kYGOXTzfRX8PwRWKkuvoYho7Uqwk6_cPEjD-43HETzYz3koSRxhgYKApZPdLnVOqjZmYDraRHk8GDh644yGDInH1LJ546Ax1zpT1N87jZ_Hk4uC2swGpuM9jFKs0bO1RLtRk_P8W9TOYItTs9XCMza4tN8UVYoLt8PDY-fxycrJmPjvmapmc-EukQTqmuLvplXLFvKwwtVa1W1IA38CNf0pORJwwQ8_yi8Ftf5YBkSCXCVs9wSN1Ty99RlE34RUI1EqccfQ0MZi_eecB7DIRpXxt2P1RB3ClqAFekilyGgl1nirrQbl3WroJTgCod6jq2aD9Ba8kwBDan4YUe4e1q6CRU3lWw6ZVP3O3I3YAo2mIYTeDc-kqA0WdMyW6ZvTayKEYaVD9nZGMhWT1fQg5U3QoohwvqcwB_JyzQF9dpEnBmwn1UhYrtGAZVFYVs3J_nhZIqjFuccLoHzVv_RTSLZ3rHAGdEQ9wWis89djhJ13AEuEN9z4QMTTSKqFKHQIVj9ngtB3KIL-GicebzS661ciLEqr5ug2K_vCPCkoQIbsgqJU1xS7657DxIrKBJ0RHQzR70bxt4GvGqO52bI3KOKo6W6I7AdbhI4G8o2v43ZFt_sq9sVbJ3h_mUs2akiQA6lgcMy5EtRrwN4l29lm150uaNIVtxPdhphgTeX0FMfJsrTOFq-gAFc8Eupn1WH1oKqrjOaeSCTwyqsZevrzPISiq4VI86W0UBglnhvH7y7-Qcl4oXWpUdtlCkicbPO9JTyxJDOlFO7GX9m1_3iKsfGe9LkisnBtFjIIE9_URCWcfdksdBwBnpzPhhU98zDFRN7EziKZOR9CsM0LJzp0dFMhpaR7jIoXClD4-zXQ68fb_ODSveoEoEhnXZA-g46FAt6oBQVfddoadtLYBjzZh7aZGlrqeM4Fd0deVYGhjbiuVDGZTxLSKOnFYtO3qAW_4zFk0kpcYDcfUvffhX4Li0hEJXTdHfclzJZj1cti94OKNAQ0CD2Fy2uUmcv3EMcgaRxOuHMOlfpwUBpnT7DZIWLTuGAXITj_zvbFVaaG0wI5YqdrxV7ECEWiPocFNACRNj1rTt5BQ7-fgtFR9ZA1ogXcu2QGEDLSSr55zlAVSvfsxS1sfjrH_WVba76Pqk327xnvWMexM6yk-GwK4tUkgNUW2ihIzTJkwzESI2DTW642X3dbEcJ80hmTqVRUqNV8Y5kk3g60_6lBeY3GExLkw6YQ",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"dyrda.illia.clg@chnu.edu.ua\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/logins",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														"logins"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": \"49d5361c-4657-4030-e341-08dacfc8ea13\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create user password",
+									"id": "e3f11592-3d8d-4392-8106-a48dcfa736fe",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"{{password}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/create-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"create-password"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "844b1be4-98f1-4a7d-af3c-35644df240c5",
+											"name": "Create user password",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrYl849xEdIcNe-d5uj9dAudLRnLwtciLI6DnIHupJoTH1IxOO6YFZNeqwTwGKXd_NQsLXQ4rrWHiAmcRubaQRGrBmNs2BpPrzfzglDagE1V1FPaPtX2MzXjXyF28uJPBUbE_ZNrjyZ9Hv3rTk0aa0BwxncmgTjWbzWZJFbsGlmCgIhGmXkwjLtb4AEq0uTp1B6vZYhGSJvIPXVqVsur8JxHC3xIC2tb4kJBKT1abvj3QSIiZeFZKPyVuAQC72ECRZ0BHG93JGpBRPoaYMvNerbeu2Fs1DfBFi5wT5p07urodyA6LsAAZPvlrlo8o1wtlyewvC1U5HC0CfmVdJYxK3dZ6LhqusRJGZDYLDWI7AXm2TKRQLrlOF2y0pq4ldz-dy_ba0FEaeb5FOn18cws2HmF7iZAmuRdJ6a7frpkqllnCSqPQS22McpnpIFiITtuV16puWSE8GIHzemg5mFPdmDOXOs45CAHVUKIb3sG6kC4-sUu9K04byMM9IeKKNxhVBlHHSqD-9UuK7R4JxXgB8T7VNkZVTTLswFMH6fc5jFUKBvu3yaDg-qFNb_dvUh7e_V62_h5pUMux4K3U2ypg6FM_5NpQGP8CIeCAOXv72VvufHhk-F9rtrFW_I8Ytox0S-vyW32IQHYXq0Cty0t5Pjm8gipFJFiW_Hj6KmloUDTogW4KNeqBWsFOsae5ZuyNqCkW6lb8a851TfNOzbzOdN4fCvhYLsTOppiuXC0Wp0vTgSw3CLDGabch0CqWYqpXQX2ZxQtHl167zsTSolw1uN-UaJNhXB26SrMksTNYM0Regkm701QBHU8SvAhe1A1GOoseOtg3-w7rSgfZ4z3FJbjTWjl3KY1V1NdGrHvjxh2g",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\": \"Aaa12345$\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/create-password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"create-password"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "49d5361c-4657-4030-e341-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Update user password",
+									"id": "47dc69a5-378b-4c61-ad8c-ad1e0f07d478",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\": \"{{oldPassword}}\",\r\n    \"newPassword\": \"{{newPassword}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/update-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"update-password"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "82eabe4e-af4e-4fc6-9266-531d337c0be9",
+											"name": "Update user password",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrYl849xEdIcNe-d5uj9dAudLRnLwtciLI6DnIHupJoTH1IxOO6YFZNeqwTwGKXd_NQsLXQ4rrWHiAmcRubaQRGrBmNs2BpPrzfzglDagE1V1FPaPtX2MzXjXyF28uJPBUbE_ZNrjyZ9Hv3rTk0aa0BwxncmgTjWbzWZJFbsGlmCgIhGmXkwjLtb4AEq0uTp1B6vZYhGSJvIPXVqVsur8JxHC3xIC2tb4kJBKT1abvj3QSIiZeFZKPyVuAQC72ECRZ0BHG93JGpBRPoaYMvNerbeu2Fs1DfBFi5wT5p07urodyA6LsAAZPvlrlo8o1wtlyewvC1U5HC0CfmVdJYxK3dZ6LhqusRJGZDYLDWI7AXm2TKRQLrlOF2y0pq4ldz-dy_ba0FEaeb5FOn18cws2HmF7iZAmuRdJ6a7frpkqllnCSqPQS22McpnpIFiITtuV16puWSE8GIHzemg5mFPdmDOXOs45CAHVUKIb3sG6kC4-sUu9K04byMM9IeKKNxhVBlHHSqD-9UuK7R4JxXgB8T7VNkZVTTLswFMH6fc5jFUKBvu3yaDg-qFNb_dvUh7e_V62_h5pUMux4K3U2ypg6FM_5NpQGP8CIeCAOXv72VvufHhk-F9rtrFW_I8Ytox0S-vyW32IQHYXq0Cty0t5Pjm8gipFJFiW_Hj6KmloUDTogW4KNeqBWsFOsae5ZuyNqCkW6lb8a851TfNOzbzOdN4fCvhYLsTOppiuXC0Wp0vTgSw3CLDGabch0CqWYqpXQX2ZxQtHl167zsTSolw1uN-UaJNhXB26SrMksTNYM0Regkm701QBHU8SvAhe1A1GOoseOtg3-w7rSgfZ4z3FJbjTWjl3KY1V1NdGrHvjxh2g",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"oldPassword\": \"Aaa12345$\",\r\n    \"newPassword\": \"Aaa12345%\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/update-password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"update-password"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "49d5361c-4657-4030-e341-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Update user phone number",
+									"id": "f10852e1-84cf-4f67-ad78-cf4071aaa258",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"newPhoneNumber\": \"{{newPhoneNumber}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/update-phone-number",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"update-phone-number"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "aee5366d-f649-4279-80bb-c3d86979630b",
+											"name": "Update user phone number",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Cookie",
+														"value": "SocialNetwork.Identity.Cookie=CfDJ8K57chHU4gFFifUn3iwf3WrYl849xEdIcNe-d5uj9dAudLRnLwtciLI6DnIHupJoTH1IxOO6YFZNeqwTwGKXd_NQsLXQ4rrWHiAmcRubaQRGrBmNs2BpPrzfzglDagE1V1FPaPtX2MzXjXyF28uJPBUbE_ZNrjyZ9Hv3rTk0aa0BwxncmgTjWbzWZJFbsGlmCgIhGmXkwjLtb4AEq0uTp1B6vZYhGSJvIPXVqVsur8JxHC3xIC2tb4kJBKT1abvj3QSIiZeFZKPyVuAQC72ECRZ0BHG93JGpBRPoaYMvNerbeu2Fs1DfBFi5wT5p07urodyA6LsAAZPvlrlo8o1wtlyewvC1U5HC0CfmVdJYxK3dZ6LhqusRJGZDYLDWI7AXm2TKRQLrlOF2y0pq4ldz-dy_ba0FEaeb5FOn18cws2HmF7iZAmuRdJ6a7frpkqllnCSqPQS22McpnpIFiITtuV16puWSE8GIHzemg5mFPdmDOXOs45CAHVUKIb3sG6kC4-sUu9K04byMM9IeKKNxhVBlHHSqD-9UuK7R4JxXgB8T7VNkZVTTLswFMH6fc5jFUKBvu3yaDg-qFNb_dvUh7e_V62_h5pUMux4K3U2ypg6FM_5NpQGP8CIeCAOXv72VvufHhk-F9rtrFW_I8Ytox0S-vyW32IQHYXq0Cty0t5Pjm8gipFJFiW_Hj6KmloUDTogW4KNeqBWsFOsae5ZuyNqCkW6lb8a851TfNOzbzOdN4fCvhYLsTOppiuXC0Wp0vTgSw3CLDGabch0CqWYqpXQX2ZxQtHl167zsTSolw1uN-UaJNhXB26SrMksTNYM0Regkm701QBHU8SvAhe1A1GOoseOtg3-w7rSgfZ4z3FJbjTWjl3KY1V1NdGrHvjxh2g",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"newPhoneNumber\": \"+38 (096) 787-54-99\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/update-phone-number",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"update-phone-number"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "49d5361c-4657-4030-e341-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Confirm user email",
+									"id": "51d7ac5d-fc96-46cf-b817-470e577d01bf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\": \"{{confirmEmailCode}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/confirm-email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"confirm-email"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "24767c5f-c568-46cf-82d5-517df1e96e77",
+											"name": "Confirm user email",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"code\": \"Q2ZESjhLNTdjaEhVNGdGRmlmVW4zaXdmM1dwNGZ3emt2TDFsb21IN1ozKzd6Tkp2SHFHNE9GbDNEbFF4VVpGejFXSWNWZG9XeG1sNkRGdS8zNytpM3crK3JyZnVOb3dJR08xc1g5dHkyMGs1N0Ewek4zYVU0OWdUR2lTVzdFNW96c2hNRC8valhSaW9SMkNXS1pTd3AzR1diOStjZlJDQlNzODVBQTlGZTQzbkhUQys3dnRka0c1YlljdVluYzFXalVPc040c1NIem5MdFRlWGNMMVF2QURWRkpJMVRzb1FSMzFOVVVtbDRIUnBSQmpyR3ZpSEIzcFVkNFpjdllyYzBxQWIxdz09\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/confirm-email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"confirm-email"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "308df356-3dc9-4c3d-e340-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Change user email",
+									"id": "cc702351-5f9f-4cdf-865f-d5ee466b7155",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"newEmail\": \"{{newEmail}}\",\r\n    \"code\": \"{{newEmailCode}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/new-email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"new-email"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "cdec57bc-eba5-428c-9528-39392486b381",
+											"name": "Change user email",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"newEmail\": \"idyrda7@gmail.com\",\r\n    \"code\": \"Q2ZESjhLNTdjaEhVNGdGRmlmVW4zaXdmM1dvWlFiQWNyc21JQlFSMnh2TVA4M3NtaHozRjlwa0RNVWVSbU5sek5nZDlXRDN3bkNmczNKcGF6TVhZV2NtVFdUeFBBZnNnNXhCNTJkMDlVREdQWWRjS09TSmk4RVlZc08rZ00xTE1DMGpZcEI0OWRSTGh1aHljRFYvRkpxZ3dBRUZIb1ljaUYrQ2N1anFJMHhzNzJ6UnZlQVJnL1ptZ0VKNmwyTWpwK2tsVnBPOGtEK3FGeCtEU0V0UUJwaXBGY1ZheE1uUm8vK2Q4ZkI1OUQ4bXk2WDVjM3lGSitiSW16UDFvbVRacDhHVGlPZz09\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/new-email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"new-email"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "49d5361c-4657-4030-e341-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Change user password",
+									"id": "c69dbd9a-7c35-4fd5-997c-9b2b0347c0ee",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"newPassword\": \"{{newPassword}}\",\r\n    \"code\": \"{{newPasswordCode}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/identity/users/:userId/new-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"identity",
+												"users",
+												":userId",
+												"new-password"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{userId}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "67856fb3-b7b3-4ce8-afdd-b183ae4e6617",
+											"name": "Change user password",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"newPassword\": \"Aaa12345$\",\r\n    \"code\": \"Q2ZESjhLNTdjaEhVNGdGRmlmVW4zaXdmM1dvdFM0alZ2blZ1eVNJSFVsYWZWREZkS3Z5czRyaEdTNy9qVzR6bkJEa245L1NEUDMrSVU1VzRYVDJXajFleHkwTFpEdHgya1J4VnZtV25QRWlDWlJCVVAxRVpmUzBQbkEwTnFuTmp5bXVwSUVMUENIVWFpdG91ZjBSRTVRclFzK1puNEp4TzhkYlZzU2lLdE1YN28yQ0tiMGlHQyszS3QvMy9yOVJBczNXMlBuc2wxNEp6MTd0Mi9waE9rbVU0dE1TS1JVbkdMRGVyMUxFb2pFN2cvaWtH\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/identity/users/:userId/new-password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"identity",
+														"users",
+														":userId",
+														"new-password"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "49d5361c-4657-4030-e341-08dacfc8ea13"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "Text",
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "a0637f17-af76-4841-833e-bb41686c8ea0"
+						}
+					],
+					"id": "285622e2-6dc1-4645-9e78-7ec3a2cdb67d"
+				}
+			],
+			"id": "6bde224a-0cf0-4f82-8bbd-000085be1676"
+		},
+		{
+			"name": "Check health",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fa26d843-ec15-4fa2-b661-cb49ad48ac12",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "39038762-eb24-4f9e-bb5c-b7e47cdeb64d",
+						"exec": [
+							"var json = pm.response.json();\r",
+							"\r",
+							"pm.test(\"API should be healthy\", function () {\r",
+							"    pm.expect(pm.response.code).be.ok;\r",
+							"    pm.expect(json.status).be.equal(\"Healthy\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "375f0ccb-f20a-4425-9837-a5ce60a2207e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "0736485c-c946-456f-9d56-19f125a78e00",
+					"name": "Check health",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Healthy\",\n    \"totalMilliseconds\": 14.6577\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fc97c9ec-d134-48f6-b845-7b402ac4bde9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "42b6a250-630a-4385-9000-26f367f35ed6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "da189bc8-2045-4070-93f0-a8b3a0c5cee1",
+			"key": "email",
+			"value": "dyrda1004@gmail.com",
+			"type": "string"
+		},
+		{
+			"id": "a5cc314c-ad3c-4042-a6b6-c9b86ebfa951",
+			"key": "password",
+			"value": "Aaa12345$",
+			"type": "string"
+		},
+		{
+			"id": "d4a8b05b-809e-4891-95fe-ca2cd3efe323",
+			"key": "baseUrl",
+			"value": "https://localhost:57646",
+			"type": "string"
+		}
+	]
+}
